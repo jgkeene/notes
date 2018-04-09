@@ -288,14 +288,19 @@ Inspecting objects
     # What object takes resposibility
     import inspect
     inspect.getmro(type(OBJECT))
+
     # Is one obj like another
-    isinstance(OBJ1, type(OBJ2))                        
+    isinstance('foo', type(''))                        
+
     # Namespace of obj
     dir(OBJECT) 	
+
     # Address of obj
     id(OBJECT)
+
     # Class membership of obj 
     OBJECT.__class__
+
     # Docstring of obj
     OBJECT.__doc__ 
 
