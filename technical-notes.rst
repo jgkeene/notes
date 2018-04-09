@@ -7,16 +7,6 @@ Technical Notes
     :depth: 5
 
 
-ubuntu
-bash
--
-python
-c/c++
--
-vim
-low-lvl
-
-
 Ubuntu
 ======
 
