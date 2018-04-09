@@ -379,7 +379,6 @@ Opening files from shell
     # Open in splits
     vim -O FILE FILE FILE
 
-Learn these
 
 .. code-block:: text
 
@@ -416,21 +415,20 @@ Learn these
     ctrl-pgDown        " goto prev tab
     
     " Show hidden chars (tabs, spaces, etc..)
-    set list
-    set nolist
+    :set list
+    :set nolist
     
     " Draw vertical column
-    set colorcolumn=79
+    :set colorcolumn=79
     
-    " check a setting 
-    set SOMESETTING?
+    " Check a setting 
+    :set colorscheme?
     
     " Remove ^M chars
     %s/^M$//g          " to type an ^M in vim, hit C-V C-M
     
     " Macros
     qd                  " start recording to, register d (possible registers are [a-z])
-    ...
     q                   " stop recording
     @d                  " execute your macro
     @@                  " execute your macro again
@@ -455,74 +453,46 @@ Learn these
     %                   " between braces/parens/etc
     
     " Delete empty lines
-    g/^$/d             " in insert mode
-    '<,'>g/^$/d        " in visual mode
+    "g/^$/d             " in insert mode
+    "'<,'>g/^$/d        " in visual mode
     
     " Hilight whitespace chars
-    /\s\+$/
+    :/\s\+$/
     
-    " Make turn a M$ file into a proper UNIX file (CR-LF)
-    set ff=unix
+    " Convert a Windows file into a unix file"
+    :set ff=unix
 
 
 Low-level
 =========
 
-# `pacat: <https://www.youtube.com/watch?v=GtQdIYUtAHgs>`_
-stdout | pacat 
-pacat /dev/urandom > padsp
 
-strace 						See the system calls made by an program
+.. code-block:: bash
 
-hopper   					Disassembler
+    stdout | pacat 					# `listen: <https://www.youtube.com/watch?v=GtQdIYUtAHgs>`_
+    pacat /dev/urandom > padsp
+    strace 						# See the system calls made by an program
+    hopper   						# Disassembler
+    xxd -s 0x7f0000 -g 1 mbp101_b02.rom | head -15  	# Hex viewer
+    binwalk -E [filename]        			# File etropy viewer
+    strings -n 4 -t x FILE				# Find string in a binary file
+    zmap						# Nmap on steroids
 
-xxd -s 0x7f0000 -g 1 mbp101_b02.rom | head -15   Hex viewer
-
-binwalk -E [filename]        			File etropy viewer
-
-strings -n 4 -t x FILE				Find string in a binary file
-
-zmap						Nmap on steroids
-
-stego `1: <https://www.youtube.com/watch?v=_j1LWehywgc>`_  `2: <https://www.youtube.com/watch?v=BcDbKlz06no>`_  `3: <https://www.youtube.com/watch?v=BQPkRlbVFEs>`_
+    stego `1: <https://www.youtube.com/watch?v=_j1LWehywgc>`_  `2: <https://www.youtube.com/watch?v=BcDbKlz06no>`_  `3: <https://www.youtube.com/watch?v=BQPkRlbVFEs>`_
 
 
 Mac address spoofing
+--------------------
+
 .. code-block:: bash
-# Via command line
-ip link show interface
-ip link set dev interface down
-ip link set dev interface address XX:XX:XX:XX:XX:XX
-ip link set dev interface up
-ip link show interface            # verify it changed
 
-#Via GUI
-macchanger
+    # Via command line
+    ip link show interface
+    ip link set dev interface down
+    ip link set dev interface address XX:XX:XX:XX:XX:XX
+    ip link set dev interface up
 
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    #Via GUI
+    macchanger
 
 
