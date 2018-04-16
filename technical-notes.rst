@@ -64,7 +64,7 @@ Sound equalization
 
 .. code-block:: bash
 
-    sudo add-apt-repository ppa:nilarimogard/webupd8
+    sudo apt-add-repository ppa:nilarimogard/webupd8
     sudo apt update
     sudo apt install pulseaudio-equalizer
 
@@ -102,7 +102,7 @@ Use `Aptik <http://www.teejeetech.in/p/aptik.html>`_ to backup software installe
 
 .. code-block:: bash
 
-    sudo apt-add-repository ppa:teejee2008/ppa
+    sudo apt-add-repository -y ppa:teejee2008/ppa
     sudo apt update
     sudo apt install aptik
 
@@ -110,7 +110,7 @@ Use `Timeshift <http://www.teejeetech.in/p/timeshift.html>`_ to backup system fi
 
 .. code-block:: bash
 
-    sudo apt-add-repository ppa:teejee2008/ppa
+    sudo apt-add-repository -y ppa:teejee2008/ppa
     sudo apt update
     sudo apt install timeshift
 
@@ -118,7 +118,7 @@ Use `BackInTime <https://github.com/bit-team/backintime>`_ to backup user files
 
 .. code-block:: bash
 
-    sudo add-apt-repository ppa:bit-team/stable
+    sudo apt-add-repository -y ppa:bit-team/stable
     sudo apt update
     sudo apt install backintime-qt4
 
@@ -175,7 +175,7 @@ Customize grub bootloader through GUI
 
 .. code-block:: bash
 
-    sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+    sudo apt-add-repository -y ppa:danielrichter2007/grub-customizer
 
 Copy files
 
@@ -354,12 +354,12 @@ C & C++
 
 .. code-block:: bash
 
-    sudo apt-get install build-essential  # c compiler
-    sudo apt-get install lldb-3.6         # lldb
-    sudo apt-get install valgrind         # valgrind
-    sudo apt-get install lib64asan0       # address sanitizer
-    sudo apt-get install ack-grep         # ack-grep
-    sudo apt-get install splint           # splint
+    sudo apt install build-essential  		# c compiler
+    sudo apt install lldb-3.6         		# lldb
+    sudo apt install valgrind         		# valgrind
+    sudo apt install lib64asan0       		# address sanitizer
+    sudo apt install ack-grep         		# ack-grep
+    sudo apt install splint           		# splint
     
     # Pass arguments among your program and the debugger
     gdb --args
@@ -384,23 +384,23 @@ Install gcc manpages
 
 .. code-block:: bash
 
-    sudo apt-get install manpages-dev
-    sudo apt-get install manpages-posix-dev
-    sudo apt-get install glibc-doc
+    sudo apt install manpages-dev
+    sudo apt install manpages-posix-dev
+    sudo apt install glibc-doc
 
 C degubbers
 
 .. code-block:: bash
 
     # equalx
-    sudo add-apt-repository ppa:q-quark/equalx
-    sudo apt-get update
-    sudo apt-get install equalx
+    sudo apt-add-repository -y ppa:q-quark/equalx
+    sudo apt update
+    sudo apt install equalx
     
     #lyx
-    sudo add-apt-repository ppa:lyx-devel/release
-    sudo apt-get update
-    sudo apt-get install lyx
+    sudo apt-add-repository -y ppa:lyx-devel/release
+    sudo apt update
+    sudo apt install lyx
 
 Vim
 ===
