@@ -1,15 +1,12 @@
 Technical Notes
 ###############
 
-
 .. contents::
     :local:
     :depth: 5
 
-
 Ubuntu
 ======
-
 
 Enable numlock on every boot, both ttys and X11 `(Ubuntu Help Wiki) <https://help.ubuntu.com/community/NumLock>`_
 
@@ -98,6 +95,16 @@ A HDD recovery procedure for failed drive
     
     # Try to recover files from image copy
 
+Making Ubuntu Backups
+---------------------
+
+`Aptik <http://www.teejeetech.in/p/aptik.html>`_
+
+.. code-block:: bash
+
+    sudo apt-add-repository ppa:teejee2008/ppa
+    sudo apt update
+    sudo apt install aptik
 
 Bash
 ====
@@ -259,10 +266,8 @@ Convert files
     # giff pdfs
     pdfdiff FILE1.pdf FILE2.pdf
 
-
 Python
 ======
-
 
 Virtualenv 
 
@@ -323,10 +328,8 @@ Debugging
 
     python -m pydb my_script.py
 
-
 C & C++
 =======
-
 
 .. code-block:: bash
 
@@ -378,10 +381,8 @@ C degubbers
     sudo apt-get update
     sudo apt-get install lyx
 
-
 Vim
 ===
-
 
 Opening files from shell
 
@@ -393,6 +394,7 @@ Opening files from shell
     # Open in splits
     vim -O FILE FILE FILE
 
+Important commands
 
 .. code-block:: text
 
@@ -476,10 +478,8 @@ Opening files from shell
     " Convert a Windows file into a unix file"
     :set ff=unix
 
-
 Low-level
 =========
-
 
 .. code-block:: bash
 
