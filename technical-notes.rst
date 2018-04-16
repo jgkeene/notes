@@ -11,7 +11,7 @@ Ubuntu
 ======
 
 
-Enable numlock on every boot, both ttys and X11 `from Ubuntu <https://help.ubuntu.com/community/NumLock>`_
+Enable numlock on every boot, both ttys and X11 `(Ubuntu Help Wiki) <https://help.ubuntu.com/community/NumLock>`_
 
 .. code-block:: bash
 
@@ -46,7 +46,7 @@ Clear crashlog
         
     sudo rm -f /var/crash/*
 
-Disable wifi on boot `from AskUbuntu <https://askubuntu.com/questions/964134/ubuntu-16-04-disable-internal-wifi-while-enabling-external-wifi-adapter/964196#964196>`_
+Disable wifi on boot `(AskUbuntu) <https://askubuntu.com/questions/964134/ubuntu-16-04-disable-internal-wifi-while-enabling-external-wifi-adapter/964196#964196>`_
 
 .. code-block:: bash
         
