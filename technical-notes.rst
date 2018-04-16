@@ -98,13 +98,32 @@ A HDD recovery procedure for failed drive
 Making Ubuntu Backups
 ---------------------
 
-`Aptik <http://www.teejeetech.in/p/aptik.html>`_
+Use `Aptik <http://www.teejeetech.in/p/aptik.html>`_ to backup software:
+1. Installed software 	(apt)
+2. Software sources 	(ppa)
+3. Downloaded packages 	(.deb)
 
 .. code-block:: bash
 
     sudo apt-add-repository ppa:teejee2008/ppa
     sudo apt update
     sudo apt install aptik
+
+Use `Timeshift <http://www.teejeetech.in/p/timeshift.html>`_ to backup system files
+
+.. code-block:: bash
+
+    sudo apt-add-repository ppa:teejee2008/ppa
+    sudo apt update
+    sudo apt install timeshift
+
+Use `BackInTime <https://github.com/bit-team/backintime>`_ to backup user files
+
+.. code-block:: bash
+
+    sudo add-apt-repository ppa:bit-team/stable
+    sudo apt update
+    sudo apt install backintime-qt4
 
 Bash
 ====
