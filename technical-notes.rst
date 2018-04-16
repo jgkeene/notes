@@ -482,7 +482,7 @@ Important commands
 Low-level
 =========
 
-.. code-block:: text 
+.. code-block:: bash
 
     stdout | pacat 					# https://www.youtube.com/watch?v=GtQdIYUtAHgs
     pacat /dev/urandom > padsp
@@ -493,7 +493,10 @@ Low-level
     strings -n 4 -t x FILE				# Find string in a binary file
     zmap						# Nmap on steroids
 
-stego `1: <https://www.youtube.com/watch?v=_j1LWehywgc>`_ `2: <https://www.youtube.com/watch?v=BcDbKlz06no>`_ `3: <https://www.youtube.com/watch?v=BQPkRlbVFEs>`_
+Stego
+-----
+
+Youtube vids `1: <https://www.youtube.com/watch?v=_j1LWehywgc>`_ `2: <https://www.youtube.com/watch?v=BcDbKlz06no>`_ `3: <https://www.youtube.com/watch?v=BQPkRlbVFEs>`_
 
 Mac address spoofing
 --------------------
