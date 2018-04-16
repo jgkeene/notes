@@ -510,7 +510,7 @@ Mac address spoofing
 Steganography
 -------------
 
-Youtube presentations `1: <https://www.youtube.com/watch?v=_j1LWehywgc>`_ `2: <https://www.youtube.com/watch?v=BcDbKlz06no>`_ `3: <https://www.youtube.com/watch?v=BQPkRlbVFEs>`_
+Youtube presentations `1 <https://www.youtube.com/watch?v=_j1LWehywgc>`_ `2 <https://www.youtube.com/watch?v=BcDbKlz06no>`_ `3 <https://www.youtube.com/watch?v=BQPkRlbVFEs>`_
 
 reStructuredText
 ================
