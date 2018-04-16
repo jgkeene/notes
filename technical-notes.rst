@@ -122,6 +122,10 @@ Use `BackInTime <https://github.com/bit-team/backintime>`_ to backup user files
     sudo apt update
     sudo apt install backintime-qt4
 
+Other Ubuntu Software
+
+- ThinkingRock (GTD) `shell script installer <https://trgtd.com.au/index.php/component/rsfiles/download?path=v3.7.0%252FTrial%252FLinux%252Ftr-3.7.0-trial-jre64.sh>`_
+
 Bash
 ====
 
