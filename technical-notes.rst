@@ -419,92 +419,72 @@ Important commands
 
 .. code-block:: text
 
-    daw              " deleteword, better than 'dw'
-    I                " begin of line, better than '0i'
-    yiw              " copy word you're in
-    mm -> `m         " mark cursor pos. as 'm' -> goto mark 'm'
+    daw              		" Deleteword, better than 'dw'
+    I                		" Begin of line, better than '0i'
+    yiw              		" Copy word you're in
+    mm -> `m         		" Mark cursor pos. as 'm' -> goto mark 'm'
     
-    " Move splits
-    ctrl-w h        " move left
-    ctrl-w l       " move right
+    ctrl-w h        		" Move split left
+    ctrl-w l       		" Move split right
     
-    " Split horizontally across all windows
-    bo sp
+    bo sp  			" Split horizontally across all windows
     
-    " Bring cursor position and screen to top of window
-    z <cr>
+    z <cr> 			" Bring cursor position and screen to top of window
     
-    " Folds
-    z-R                 " open all folds
-    z-M                     " close all folds
+    z-R                 	" Open all folds
+    z-M                     	" Close all folds
     
-    " Jump though your last edits
-    g;                " goto prev edit position
-    g,                " goto next edit position
-    changes          " list all positions
+    g;                		" Goto prev edit position
+    g,                		" Goto next edit position
+    changes          		" List all edit positions
     
-    " Indenting
-    =                 " auto-indent selected lines
-    gg  ->  =G        " auto-indent all lines
+    =                 		" Auto-indent selected lines
+    gg -> =G        		" Auto-indent all lines
     
-    " Tabs
-    ctrl-pgUp          " goto next tab
-    ctrl-pgDown        " goto prev tab
+    ctrl-pgUp          		" Goto next tab
+    ctrl-pgDown        		" Goto prev tab
     
-    " Show hidden chars (tabs, spaces, etc..)
-    :set list
-    :set nolist
+    :set list     		" Show hidden chars (tabs, spaces, etc..)
+    :set nolist  		" Hide hidden chars (tabs, spaces, etc..)
     
-    " Draw vertical column
-    :set colorcolumn=79
+    :set colorcolumn=79     	" Draw vertical column
     
-    " Check a setting 
-    :set colorscheme?
+    :set colorscheme? 		" Check a setting 
     
-    " Remove ^M chars
-    %s/^M$//g          " to type an ^M in vim, hit C-V C-M
+    %s/^M$//g               	" Remove ^M chars (to get ^M in vim, type c-V -> c-M)
     
-    " Macros
-    qd                  " start recording to, register d (possible registers are [a-z])
-    q                   " stop recording
-    @d                  " execute your macro
-    @@                  " execute your macro again
-    '<,'>normal @d      " execute your macro on a visual selection
+    qd                  	" Start recording macro to register d (possible registers are [a-z])
+    q                   	" Stop recording macro
+    @d                  	" Execute your macro
+    @@                  	" Execute your macro again
+    '<,'>normal @d      	" Execute your macro on a visual selection
     
-    " Delete till a char (ex: '<')
-    dt<
+    dt<     			" Delete till a char (ex: '<')
     
-    " Indenting
-    =                   " auto-indent selected lines
-    gg =G               " auto-indent all lines
+    =                   	" Auto-indent selected lines
+    gg =G               	" Auto-indent all lines
     
-    " Open file into a new-tab
-    tabedit FILE
+    tabedit FILE 		" Open file into a new-tab
     
-    " Paste and preserve formatting
-    yO -> (paste)
+    yO -> (paste)     		" Paste and preserve formatting
     
-    " Jumping around
-    '{' & '}'           " through paragraphs
-    '(' & ')'           " through sentences
-    %                   " between braces/parens/etc
+    '{' & '}'           	" Jump through paragraphs
+    '(' & ')'           	" Jump through sentences
+    %                   	" Jump between braces/parens/etc
     
-    " Delete empty lines
-    "g/^$/d             " in insert mode
-    "'<,'>g/^$/d        " in visual mode
-    
-    " Hilight whitespace chars
-    :/\s\+$/
-    
-    " Convert a Windows file into a unix file"
-    :set ff=unix
+    g/^$/d                 	" Delete empty lines in insert mode
+    '<,'>g/^$/d            	" Delete empty lines in visual mode
+
+    :/\s\+$/     		" Hilight whitespace chars
+
+    :set ff=unix     		" Convert a Windows file into a unix file
 
 Low-level
 =========
 
-.. code-block:: bash
+.. code-block:: text 
 
-    stdout | pacat 					# `listen: <https://www.youtube.com/watch?v=GtQdIYUtAHgs>`_
+    stdout | pacat 					# https://www.youtube.com/watch?v=GtQdIYUtAHgs
     pacat /dev/urandom > padsp
     strace 						# See the system calls made by an program
     hopper   						# Disassembler
@@ -513,8 +493,7 @@ Low-level
     strings -n 4 -t x FILE				# Find string in a binary file
     zmap						# Nmap on steroids
 
-    stego `1: <https://www.youtube.com/watch?v=_j1LWehywgc>`_  `2: <https://www.youtube.com/watch?v=BcDbKlz06no>`_  `3: <https://www.youtube.com/watch?v=BQPkRlbVFEs>`_
-
+stego `1: <https://www.youtube.com/watch?v=_j1LWehywgc>`_ `2: <https://www.youtube.com/watch?v=BcDbKlz06no>`_ `3: <https://www.youtube.com/watch?v=BQPkRlbVFEs>`_
 
 Mac address spoofing
 --------------------
