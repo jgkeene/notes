@@ -5,23 +5,23 @@ Training Notes
     :local:
     :depth: 5
 
-Jocko `Jocko Podcast <http://jockopodcast.libsyn.com/rss>`_
-===========================================================
-
+Jocko 
+=====
 - Train every day
+- `Podcast <http://jockopodcast.libsyn.com/rss>`_
 
-Mark Bell `PowerCast Podcast <http://thepowercast.libsyn.com/rss>`_
-===================================================================
-
+Mark Bell 
+=========
+- `Podcast <http://thepowercast.libsyn.com/rss>`_
 - On a keto diet?
     - bone broth
     - salt (salt is good for you)
 - His training style
     - conjugate system (westside)
 
-Charles Poliquin `StrengthSensei Website <http://www.strengthsensei.com>`_
-==========================================================================
-
+Charles Poliquin 
+================
+- `Website <http://www.strengthsensei.com>`_
 - You get 30% lower androgens if you carry your phone in your pocket
 - Weight training >> steady-state-cardio
 - 50g of carbs per day, from veggies only
