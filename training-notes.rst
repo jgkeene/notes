@@ -7,11 +7,13 @@ Training Notes
 
 Jocko 
 =====
+
 - Train every day
 - `Podcast <http://jockopodcast.libsyn.com/rss>`_
 
 Mark Bell 
 =========
+
 - `Podcast <http://thepowercast.libsyn.com/rss>`_
 - On a keto diet?
     - bone broth
@@ -21,6 +23,7 @@ Mark Bell
 
 Charles Poliquin 
 ================
+
 - `Website <http://www.strengthsensei.com>`_
 - You get 30% lower androgens if you carry your phone in your pocket
 - Weight training >> steady-state-cardio
