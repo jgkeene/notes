@@ -17,12 +17,10 @@ Mark Bell
 - `Podcast <http://thepowercast.libsyn.com/rss>`_
 
 - On a keto diet?
-    
     - bone broth
     - salt (salt is good for you)
 
 - His training style
-
     - conjugate system (westside)
 
 Charles Poliquin 
@@ -37,6 +35,5 @@ Charles Poliquin
 - Squat, deadlift, chins, presses
 
 - DHEA (good) vs cortisol (bad)
-
     - DHEA is more important than test
 
