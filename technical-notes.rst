@@ -512,9 +512,9 @@ Mac address spoofing
 reStructuredText
 ================
 
-Examples::
+Examples:
 
-    https://en.wikipedia.org/wiki/ReStructuredText
-    https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst
-    https://github.com/aol/moloch/blob/master/README.rst
-    `asdf <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+- `Wikipedia <https://en.wikipedia.org/wiki/ReStructuredText>`_
+- `Cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_
+- `Official Quickstart Guide <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+- `An example README.rst on github <https://github.com/aol/moloch/blob/master/README.rst>`_
