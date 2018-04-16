@@ -9,17 +9,14 @@ Jocko
 =====
 
 - Train every day
-- `Podcast <http://jockopodcast.libsyn.com/rss>`_
+- `His podcast <http://jockopodcast.libsyn.com/rss>`_
 
 Mark Bell 
 =========
 
-- On a keto diet?
-  - bone broth
-  - salt (salt is good for you)
-- His training style
-  - conjugate system (westside)
-- `Podcast <http://thepowercast.libsyn.com/rss>`_
+- On a keto diet? Use bone broth & salt (salt is really good for you)
+- His training style is the conjugate system (westside)
+- `His podcast <http://thepowercast.libsyn.com/rss>`_
 
 Charles Poliquin 
 ================
@@ -30,7 +27,6 @@ Charles Poliquin
 - 45-60g of Omega3 fish oil per day
 - You gotta earn your carbs, must see abs first
 - Squat, deadlift, chins, presses
-- DHEA (good) vs cortisol (bad)
-  - DHEA is more important than test
-- `Website <http://www.strengthsensei.com>`_
+- DHEA (good) vs cortisol (bad) (*DHEA is even more important than test*)
+- `His website <http://www.strengthsensei.com>`_
 
