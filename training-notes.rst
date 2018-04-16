@@ -15,10 +15,12 @@ Mark Bell
 =========
 
 - `Podcast <http://thepowercast.libsyn.com/rss>`_
-- On a keto diet?
 
+- On a keto diet?
+    
     - bone broth
     - salt (salt is good for you)
+
 - His training style
 
     - conjugate system (westside)
@@ -33,6 +35,7 @@ Charles Poliquin
 - 45-60g of Omega3 fish oil per day
 - You gotta earn your carbs, must see abs first
 - Squat, deadlift, chins, presses
+
 - DHEA (good) vs cortisol (bad)
 
     - DHEA is more important than test
