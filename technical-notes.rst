@@ -121,7 +121,17 @@ Use `BackInTime <https://github.com/bit-team/backintime>`_ to backup user files
     sudo apt-add-repository -y ppa:bit-team/stable
     sudo apt update
     sudo apt install backintime-qt4
+    
+View Files From A Clonezilla Backup
+-----------------------------------
 
+.. code-block:: bash
+
+    # Extract into an image file
+    cat sda2.ext4-ptcl-img.gz.aa  | gunzip -c | partclone.restore -s - -W -O ./sdb2.ext4.img
+
+    # Mount the image file and browse files
+    
 Other Ubuntu Software
 ---------------------
 
