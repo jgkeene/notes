@@ -326,6 +326,25 @@ Convert files
 Python
 ======
 
+Pip
+
+.. code-block:: bash
+
+    wget https://bootstrap.pypa.io/get-pip.py
+    sudo python3 ./get-pip.py
+    
+Install With Pip, Over The Internet
+
+.. code-block:: bash
+
+    sudo -H sudo pip3 install --user PACKAGE
+    
+Install With Pip, From File Downloaded From `Pypi <https://pypi.org/>`_
+
+.. code-block:: bash
+
+    sudo -H pip3 install ./PAKAGE.tar.gz
+    
 Virtualenv 
 
 .. code-block:: bash 
