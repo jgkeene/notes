@@ -140,7 +140,7 @@ Other Ubuntu Software
 View Installed Software
 -----------------------
 
-.. code-block::text
+.. code-block:: text
 
     # List all installed packages, 
     apt list --installed
