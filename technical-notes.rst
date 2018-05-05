@@ -137,6 +137,26 @@ Other Ubuntu Software
 
 - ThinkingRock (GTD) `shell script installer <https://trgtd.com.au/index.php/component/rsfiles/download?path=v3.7.0%252FTrial%252FLinux%252Ftr-3.7.0-trial-jre64.sh>`_
 
+View Installed Software
+-----------------------
+
+.. code-block::text
+
+    # List all installed packages, 
+    apt list --installed
+    
+    # Shows the commands you used to originally install the packages
+    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
+    egrep '^(Start-Date:|Commandline:)' |
+    grep -v aptdaemon |
+    egrep '^Commandline:'
+    
+    # Lists installed packages, with descriptions
+    aptitude search -F '%p' '~i'
+
+    # Lists instlled packages, without descriptions
+    aptitude search -F '%p' '~i'
+    
 Bash
 ====
 
