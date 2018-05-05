@@ -137,8 +137,8 @@ Other Ubuntu Software
 
 - ThinkingRock (GTD) `shell script installer <https://trgtd.com.au/index.php/component/rsfiles/download?path=v3.7.0%252FTrial%252FLinux%252Ftr-3.7.0-trial-jre64.sh>`_
 
-View Installed Software  `(Ask Ubuntu) <https://askubuntu.com/questions/17823/how-to-list-all-installed-packages>`_
--------------------------------------------------------------------------------------------------------------------
+View Installed Software 
+-----------------------
 
 .. code-block:: bash
 
