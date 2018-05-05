@@ -137,7 +137,7 @@ Other Ubuntu Software
 
 - ThinkingRock (GTD) `shell script installer <https://trgtd.com.au/index.php/component/rsfiles/download?path=v3.7.0%252FTrial%252FLinux%252Ftr-3.7.0-trial-jre64.sh>`_
 
-View Installed Software 
+View Installed Software `[1] <https://askubuntu.com/questions/17823/how-to-list-all-installed-packages>`_
 -----------------------
 
 .. code-block:: bash
@@ -162,10 +162,6 @@ View Installed Software
     egrep '^(Start-Date:|Commandline:)' |
     grep -v aptdaemon |
     egrep '^Commandline:'
-    
-    [1]
-    
-    `[1] <https://askubuntu.com/questions/17823/how-to-list-all-installed-packages>`_.
 
 Bash
 ====
