@@ -145,10 +145,10 @@ View Installed Software
     # List all installed packages, with version numbers
     apt list --installed
     
-    # Lists installed packages, with descriptions
-    aptitude search -F '%p' '~i'
+    # Lists installed packages (excludes if installed as a dependency), with descriptions
+    aptitude search '~i!~M'
 
-    # Lists instlled packages, without descriptions
+    # Lists installed packages (excludes if installed as a dependency), without descriptions
     aptitude search -F '%p' '~i'
     
     # Shows the installation commands you used, with dates
