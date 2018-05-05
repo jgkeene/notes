@@ -326,7 +326,17 @@ Virtualenv
 
     virtualenv ./myvenv 
     . ./myvenv/bin/activate 
-    deactivate 
+    deactivate
+    
+Jupyter Notebook
+
+.. code-block:: bash
+
+    # Ensure that you have the latest pip
+    pip3 install --upgrade pip
+
+    # Install Jupyter Notebook
+    sudo -H pip3 install jupyter
 
 Web scraping 
 
