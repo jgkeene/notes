@@ -142,14 +142,8 @@ View Installed Software
 
 .. code-block:: bash
 
-    # List all installed packages, 
+    # List all installed packages, with version numbers
     apt list --installed
-    
-    # Shows the commands you used to originally install the packages
-    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
-    egrep '^(Start-Date:|Commandline:)' |
-    grep -v aptdaemon |
-    egrep '^Commandline:'
     
     # Lists installed packages, with descriptions
     aptitude search -F '%p' '~i'
@@ -157,6 +151,12 @@ View Installed Software
     # Lists instlled packages, without descriptions
     aptitude search -F '%p' '~i'
     
+    # Shows the commands you used to originally install the packages
+    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
+    egrep '^(Start-Date:|Commandline:)' |
+    grep -v aptdaemon |
+    egrep '^Commandline:'
+
 Bash
 ====
 
