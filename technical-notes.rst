@@ -135,6 +135,16 @@ View Files From A Clonezilla Backup
 
     # Mount the image file and browse files
     
+Dconf Settings
+--------------
+
+.. code-block:: bash
+
+    # dump dconf settings
+    dconf dump / >> ./dump.txt
+    # restore dconf settings
+    dconf load ./dump.txt
+    
 Other Ubuntu Software
 ---------------------
 
