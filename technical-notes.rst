@@ -322,6 +322,21 @@ Convert files
     # giff pdfs
     pdfdiff FILE1.pdf FILE2.pdf
     
+Verify MD5 Checksums
+    
+Download checksum file (MD5SUMS), and compare automatically
+
+.. code-block:: bash
+
+    md5sum --check ./MD5SUMS
+
+Generate the MD5 checksum for your file, and compare it manually
+
+.. code-block:: bash
+
+    md5sum ./ubuntu-18.04-desktop-amd64.iso
+
+    
 Samba Windows Shares
 --------------------
 
