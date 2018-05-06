@@ -98,21 +98,14 @@ Making Ubuntu Backups
 ---------------------
 
 Use `Aptik <https://github.com/teejee2008/aptik/>`_ to backup software
+`[releases] <https://github.com/teejee2008/aptik/releases>`_
 `[docs] <https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
-
-Via .dev (recommended - provides gui)
-
-.. code-block:: bash
-
-    # Download .deb from https://github.com/teejee2008/aptik/releases
-
-Via apt (not recommended - provides terminal only)
 
 .. code-block:: bash
 
     sudo apt-add-repository -y ppa:teejee2008/ppa
-    sudo apt update
-    sudo apt install aptik
+    sudo apt-get update
+    sudo apt-get install aptik-gtk aptik
 
 Use `Timeshift <https://github.com/teejee2008/timeshift>`_ to backup system files
 `[docs] <https://github.com/teejee2008/timeshift/wiki>`_
