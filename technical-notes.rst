@@ -101,15 +101,17 @@ Use `Aptik <http://www.teejeetech.in/p/aptik.html>`_ to backup software
 `[github] <https://github.com/teejee2008/aptik/>`_ 
 `[docs]<https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
 
+
 .. code-block:: bash
 
     sudo apt-add-repository -y ppa:teejee2008/ppa
     sudo apt update
     sudo apt install aptik
 
-Use `Timeshift <http://www.teejeetech.in/p/timeshift.html>`_ to backup system files
+Use `Timeshift <http://www.teejeetech.in/p/timeshift.html>`_ to backup system files  
 `[github] <https://github.com/teejee2008/timeshift>`_ 
 `[docs] <https://github.com/teejee2008/timeshift/wiki>`_
+
 
 .. code-block:: bash
 
