@@ -100,6 +100,14 @@ Making Ubuntu Backups
 Use `Aptik <https://github.com/teejee2008/aptik/>`_ to backup software
 `[docs] <https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
 
+Via .dev (recommended - provides gui)
+
+.. code-block:: bash
+
+    # Download .deb from https://github.com/teejee2008/aptik/releases
+
+Via apt (not recommended - provides terminal only)
+
 .. code-block:: bash
 
     sudo apt-add-repository -y ppa:teejee2008/ppa
