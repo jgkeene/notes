@@ -341,7 +341,7 @@ Manual mount via Nautilus
 .. code-block:: bash
 
     # Results
-    mount | grep fuse
+    mount | grep gvfsd-fuse
     
 .. code-block:: text
 
@@ -351,11 +351,12 @@ Automatic mount, via fstab
 
 .. code-block:: bash
 
-    mkdir /media/azhee/smb
+    # Make mount-point
+    mkdir /media/azhee/nfs
     # Edit fstab
     sudo vim /etc/fstab
     # Add this line
-    //192.168.0.3/nfs  /media/azhee/smb  cifs  rw,_netdev,username=0,password=0,users  0 0 
+    //192.168.0.3/nfs  /media/azhee/nfs  cifs  rw,_netdev,username=0,password=0,users  0 0 
 
 Results:
 
@@ -365,7 +366,7 @@ Results:
 
 .. code-block:: text
 
-    //192.168.0.3/nfs on /media/azhee/asdf type cifs (rw,nosuid,nodev,relatime,vers=default,cache=strict,username=0,domain=,uid=1000,forceuid,gid=1000,forcegid,addr=192.168.0.3,file_mode=0755,dir_mode=0755,nounix,serverino,mapposix,rsize=1048576,wsize=1048576,echo_interval=60,actimeo=1,_netdev)
+    //192.168.0.3/nfs on /media/azhee/nfs type cifs (rw,nosuid,nodev,relatime,vers=default,cache=strict,username=0,domain=,uid=1000,forceuid,gid=1000,forcegid,addr=192.168.0.3,file_mode=0755,dir_mode=0755,nounix,serverino,mapposix,rsize=1048576,wsize=1048576,echo_interval=60,actimeo=1,_netdev)
 
 Python
 ======
