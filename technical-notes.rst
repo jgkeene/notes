@@ -335,7 +335,8 @@ Generate the MD5 checksum for your file, and compare it manually
 
 .. code-block:: bash
 
-    md5sum ./ubuntu-18.04-desktop-amd64.iso
+    $ md5sum ./ubuntu-18.04-desktop-amd64.iso
+    129292a182136a35e1f89c586dbac2e2  ./ubuntu-18.04-desktop-amd64.iso
 
     
 Samba Windows Shares
