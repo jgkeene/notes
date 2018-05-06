@@ -358,11 +358,11 @@ Automatic mount, via fstab
 
 Results:
 
-..code-block:: bash
+.. code-block:: bash
 
     mount | grep cifs
 
-..code-block:: text
+.. code-block:: text
 
     //192.168.0.3/nfs on /media/azhee/asdf type cifs (rw,nosuid,nodev,relatime,vers=default,cache=strict,username=0,domain=,uid=1000,forceuid,gid=1000,forcegid,addr=192.168.0.3,file_mode=0755,dir_mode=0755,nounix,serverino,mapposix,rsize=1048576,wsize=1048576,echo_interval=60,actimeo=1,_netdev)
 
