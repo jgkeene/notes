@@ -97,7 +97,7 @@ A HDD recovery procedure for failed drive
 Making Ubuntu Backups
 ---------------------
 
-Use `Aptik <http://www.teejeetech.in/p/aptik.html>`_ to backup software installed via apt, ppa, and .deb
+Use `Aptik <http://www.teejeetech.in/p/aptik.html>`_ to backup software installed via apt, ppa, and .deb `(github) <https://github.com/teejee2008/aptik/>`_ `(docs) <https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
 
 .. code-block:: bash
 
