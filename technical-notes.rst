@@ -323,24 +323,48 @@ Convert files
     pdfdiff FILE1.pdf FILE2.pdf
     
 Samba Windows Shares
+--------------------
+
+Install CIFS VFS (http://www.configserverfirewall.com/ubuntu-linux/mount-samba-share-ubuntu-cifs/)
 
 .. code-block:: bash
 
-    # Install CIFS VFS (http://www.configserverfirewall.com/ubuntu-linux/mount-samba-share-ubuntu-cifs/)
     sudo apt update
     sudo apt install cifs-utils
-    
-    # Manual mount via Nautilus
+
+Manual mount via Nautilus
+
     nautilus --select smb://192.168.0.3/nfs
-    # It will mount it at this location
-    cd /run/user/azhee/gvfs/
+
+Results:
+
+.. code-block:: bash
+
+    mount | grep fuse
     
-    # Automatic mount, via fstab
+.. code-block:: text
+
+    gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+
+Automatic mount, via fstab
+
+.. code-block:: bash
+
     mkdir /media/azhee/smb
     # Edit fstab
     sudo vim /etc/fstab
     # Add this line
     //192.168.0.3/nfs  /media/azhee/smb  cifs  rw,_netdev,username=0,password=0,users  0 0 
+
+Results:
+
+..code-block:: bash
+
+    mount | grep cifs
+
+..code-block:: text
+
+    //192.168.0.3/nfs on /media/azhee/asdf type cifs (rw,nosuid,nodev,relatime,vers=default,cache=strict,username=0,domain=,uid=1000,forceuid,gid=1000,forcegid,addr=192.168.0.3,file_mode=0755,dir_mode=0755,nounix,serverino,mapposix,rsize=1048576,wsize=1048576,echo_interval=60,actimeo=1,_netdev)
 
 Python
 ======
