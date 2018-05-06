@@ -99,8 +99,7 @@ Making Ubuntu Backups
 
 Use `Aptik <http://www.teejeetech.in/p/aptik.html>`_ to backup software  
 `[github] <https://github.com/teejee2008/aptik/>`_ 
-`[docs]<https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
-
+`[docs] <https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
 
 .. code-block:: bash
 
@@ -111,7 +110,6 @@ Use `Aptik <http://www.teejeetech.in/p/aptik.html>`_ to backup software
 Use `Timeshift <http://www.teejeetech.in/p/timeshift.html>`_ to backup system files  
 `[github] <https://github.com/teejee2008/timeshift>`_ 
 `[docs] <https://github.com/teejee2008/timeshift/wiki>`_
-
 
 .. code-block:: bash
 
