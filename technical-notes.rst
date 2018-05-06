@@ -105,7 +105,7 @@ Use `Aptik <http://www.teejeetech.in/p/aptik.html>`_ to backup software  `[githu
     sudo apt update
     sudo apt install aptik
 
-Use `Timeshift <http://www.teejeetech.in/p/timeshift.html>`_ to backup system files  `[github] <https://github.com/teejee2008/timeshift>`_ `[docs] <https://github.com/teejee2008/timeshift/wiki>`_
+Use `Timeshift <http://www.teejeetech.in/p/timeshift.html>`_ to backup system files  ` [github] <https://github.com/teejee2008/timeshift>`_ `[docs] <https://github.com/teejee2008/timeshift/wiki>`_
 
 .. code-block:: bash
 
