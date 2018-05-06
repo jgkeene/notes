@@ -337,7 +337,7 @@ Samba Windows Shares
     # Automatic Mount With fstab
     sudo vim /etc/fstab
     # Add this line
-    //192.168.0.3/nfs  /media/nfs  cifs  rw,_netdev,username=0,password=0,uid=1000,gid=1000   0 0
+    //192.168.0.3/nfs  /media/azhee/asdf  cifs  rw,_netdev,username=0,password=0,users  0 0 
 
 Python
 ======
