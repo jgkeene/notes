@@ -330,14 +330,17 @@ Samba Windows Shares
     sudo apt update
     sudo apt install cifs-utils
     
-    # Manual Mount With Nautilus 'smb://192.168.0.3'
-    # Navigate To Mount Point
+    # Manual mount via Nautilus
+    nautilus --select smb://192.168.0.3/nfs
+    # It will mount it at this location
     cd /run/user/azhee/gvfs/
     
-    # Automatic Mount With fstab
+    # Automatic mount, via fstab
+    mkdir /media/azhee/smb
+    # Edit fstab
     sudo vim /etc/fstab
     # Add this line
-    //192.168.0.3/nfs  /media/azhee/asdf  cifs  rw,_netdev,username=0,password=0,users  0 0 
+    //192.168.0.3/nfs  /media/azhee/smb  cifs  rw,_netdev,username=0,password=0,users  0 0 
 
 Python
 ======
