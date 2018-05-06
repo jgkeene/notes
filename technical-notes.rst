@@ -391,14 +391,14 @@ Results:
 Manpages
 --------
 
-Redirect manpage to browser
+Redirect manpage to browser (good for printing)
 
 .. code-block:: bash
 
-    # Install grof
+    # Install groff
     sudo apt install groff
     # Generate manpage
-    man --html=google-chrome-stable man
+    man --html=google-chrome-stable backintime
 
 Python
 ======
