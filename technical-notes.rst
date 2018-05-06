@@ -664,7 +664,9 @@ https://atom.io/
 Install Packages
 ----------------
 
-apm install https://github.com/travs/markdown-pdf.git
+.. code-block:: bash
+
+    apm install https://github.com/travs/markdown-pdf.git
 
 Docs
 ----
