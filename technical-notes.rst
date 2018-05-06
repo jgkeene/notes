@@ -391,14 +391,34 @@ Results:
 Manpages
 --------
 
-Redirect manpage to browser (good for printing)
+Generate html manpage, open with browser (good for printing)
 
 .. code-block:: bash
 
     # Install groff
     sudo apt install groff
     # Generate manpage
-    man --html=google-chrome-stable backintime
+    man --html=google-chrome-stable SOME_APPLICATION
+ 
+ Pipe html directly to browser
+ 
+.. code-block:: bash
+
+    # Install txt2html
+    sudo apt install txt2html
+    # Pipe manpage to browser
+    man SOME_APPLICATION | txt2html - | google-chrome-stable "data:text/html;base64,$(base64)"
+
+Pipe to lynx, browse with navigation links
+
+.. code-block:: bash
+
+    # Install man2html
+    sudo apt install man2html
+    # Pipe manpage to lynx
+    zcat $(man --path 1 grep) | man2html -l | lynx -stdin
+    # Pipe manpage to w3m
+    zcat $(man --path 1 grep) | man2html -l | w3m -T text/html
 
 Python
 ======
