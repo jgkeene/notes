@@ -97,7 +97,8 @@ A HDD recovery procedure for failed drive
 Making Ubuntu Backups
 ---------------------
 
-Use `Aptik <http://www.teejeetech.in/p/aptik.html>`_ to backup software  `[github] <https://github.com/teejee2008/aptik/>`_ `[docs] <https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
+Use `Aptik <https://github.com/teejee2008/aptik/>`_ to backup software
+`[docs] <https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
 
 .. code-block:: bash
 
@@ -105,8 +106,7 @@ Use `Aptik <http://www.teejeetech.in/p/aptik.html>`_ to backup software  `[githu
     sudo apt update
     sudo apt install aptik
 
-Use `Timeshift <http://www.teejeetech.in/p/timeshift.html>`_ to backup system files
-`[github] <https://github.com/teejee2008/timeshift>`_
+Use `Timeshift <https://github.com/teejee2008/timeshift>`_ to backup system files
 `[docs] <https://github.com/teejee2008/timeshift/wiki>`_
 
 .. code-block:: bash
@@ -116,6 +116,7 @@ Use `Timeshift <http://www.teejeetech.in/p/timeshift.html>`_ to backup system fi
     sudo apt install timeshift
 
 Use `BackInTime <https://github.com/bit-team/backintime>`_ to backup user files
+`[docs] <http://backintime.readthedocs.io/en/latest/>`_
 
 .. code-block:: bash
 
