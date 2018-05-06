@@ -652,3 +652,21 @@ Examples:
 - `Cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_
 - `Official Quickstart Guide <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
 - `A README.rst on github <https://github.com/aol/moloch/blob/master/README.rst>`_
+
+Atom
+====
+
+Install
+-------
+
+https://atom.io/
+
+Install Packages
+----------------
+
+apm install https://github.com/travs/markdown-pdf.git
+
+Docs
+----
+
+https://flight-manual.atom.io/
