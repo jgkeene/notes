@@ -326,7 +326,8 @@ Samba Windows Shares
 
 .. code-block:: bash
 
-    # Install CIFS VFS  http://www.configserverfirewall.com/ubuntu-linux/mount-samba-share-ubuntu-cifs/
+    # Install CIFS VFS
+    #http://www.configserverfirewall.com/ubuntu-linux/mount-samba-share-ubuntu-cifs/
     sudo apt update
     sudo apt install cifs-utils
     
