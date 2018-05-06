@@ -333,27 +333,28 @@ Samba Windows Shares
     # cd to the smb mount point
     cd /run/user/azhee/gvfs/
 
+
 Python
 ======
 
 Pip
 
 .. code-block:: bash
-
+    # https://pip.pypa.io/en/stable/installing/
     wget https://bootstrap.pypa.io/get-pip.py
-    sudo python3 ./get-pip.py
+    sudo -H python3 ./get-pip.py
     
-Install With Pip, Over The Internet
+Installing Packages With Pip, Over The Internet
 
 .. code-block:: bash
 
-    sudo -H sudo pip3 install --user PACKAGE
+    pip3 install --user PACKAGE
     
-Install With Pip, From File Downloaded From `Pypi <https://pypi.org/>`_
+Installing Packages With Pip, From File Downloaded From `Pypi <https://pypi.org/>`_
 
 .. code-block:: bash
 
-    sudo -H pip3 install --user ./PAKAGE.tar.gz
+    pip3 install --user ./PAKAGE.tar.gz
     
 Virtualenv 
 
@@ -363,7 +364,7 @@ Virtualenv
     sudo apt install python-virtualenv
 
     # Create virtualenv directory
-    virtualenv ./myvenv 
+    virtualenv -p python3 ./myvenv 
     . ./myvenv/bin/activate 
     deactivate
     
