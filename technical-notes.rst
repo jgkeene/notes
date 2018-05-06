@@ -334,12 +334,13 @@ Install CIFS VFS (http://www.configserverfirewall.com/ubuntu-linux/mount-samba-s
 
 Manual mount via Nautilus
 
-    nautilus --select smb://192.168.0.3/nfs
+.. code-block:: bash
 
-Results:
+    nautilus --select smb://192.168.0.3/nfs
 
 .. code-block:: bash
 
+    # Results
     mount | grep fuse
     
 .. code-block:: text
