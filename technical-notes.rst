@@ -20,7 +20,6 @@ Enable numlock on every boot, both ttys and X11 `(Ubuntu Help Wiki) <https://hel
       /usr/bin/setleds -D +num < $tty
     done
     
-    
     # For X11
     sudo apt install numlockx
     sudo vim /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
@@ -322,6 +321,17 @@ Convert files
     
     # giff pdfs
     pdfdiff FILE1.pdf FILE2.pdf
+    
+Samba Windows Shares
+
+.. code-block:: bash
+
+    # Install CIFS VFS  http://www.configserverfirewall.com/ubuntu-linux/mount-samba-share-ubuntu-cifs/
+    sudo apt update
+    sudo apt install cifs-utils
+    
+    # cd to the smb mount point
+    cd /run/user/azhee/gvfs/
 
 Python
 ======
@@ -343,12 +353,16 @@ Install With Pip, From File Downloaded From `Pypi <https://pypi.org/>`_
 
 .. code-block:: bash
 
-    sudo -H pip3 install ./PAKAGE.tar.gz
+    sudo -H pip3 install --user ./PAKAGE.tar.gz
     
 Virtualenv 
 
 .. code-block:: bash 
 
+    # Install
+    sudo apt install python-virtualenv
+
+    # Create virtualenv directory
     virtualenv ./myvenv 
     . ./myvenv/bin/activate 
     deactivate
