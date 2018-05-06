@@ -323,6 +323,7 @@ Convert files
     pdfdiff FILE1.pdf FILE2.pdf
     
 Verify MD5 Checksums
+--------------------
     
 Download checksum file (MD5SUMS), and compare automatically
 
