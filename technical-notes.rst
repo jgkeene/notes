@@ -391,7 +391,16 @@ Results:
 Manpages
 --------
 
-Generate html manpage with groff, open with browser **(good for printing)**
+Browse with yelp **(best for navigating links)**
+
+.. code-block:: bash
+
+    # Install yelp
+    sudo apt install yelp
+    # Browse with yelp
+    yelp man:grep
+    
+Generate html manpage with groff, open with browser **(best for printing)**
 
 .. code-block:: bash
 
@@ -400,13 +409,6 @@ Generate html manpage with groff, open with browser **(good for printing)**
     # Generate manpage
     man --html=google-chrome-stable SOME_APPLICATION
  
-Browse with yelp **(good for navigating links)**
-
-    # Install yelp
-    sudo apt install yelp
-    # Browse with yelp
-    yelp man:grep
-    
 Pipe html directly to browser
  
 .. code-block:: bash
