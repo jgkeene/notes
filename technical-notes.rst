@@ -17,6 +17,14 @@ deja-dup-preferences
 deja-dup backup
 duplicity
 
+
+https://askubuntu.com/questions/854373/how-to-create-a-desktop-shortcut/854398
+sudo apt-get install --no-install-recommends gnome-panel
+gnome-desktop-item-edit --create-new ~/Desktop
+
+
+
+
 New
 ===
 
