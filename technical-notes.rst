@@ -23,6 +23,9 @@ sudo apt-get install --no-install-recommends gnome-panel
 gnome-desktop-item-edit --create-new ~/Desktop
 
 
+install java, for
+    pycharm
+    tr
 
 
 New
