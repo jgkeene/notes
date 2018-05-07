@@ -5,6 +5,11 @@ Technical Notes
     :local:
     :depth: 5
 
+syanptic error fix
+http://forums.debian.net/viewtopic.php?f=17&t=133676&start=15
+sudo setfacl -m _apt:rwx /var/lib/update-notifier/package-data-downloads/partial
+# confirm
+getfacl -t /var/lib/update-notifier/package-data-downloads/partial
 
 dconf dump /
 
