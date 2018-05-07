@@ -19,9 +19,7 @@ Rsync
 Swap caps/ctrl keys
 -------------------
 
-`site <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_
-
-Using only buit-ins
+Using only buit-ins `(source) <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_```
 
 .. code-block:: text
 
@@ -37,9 +35,7 @@ Using only buit-ins
     # Add this line
     setxkbmap -layout us -option ctrl:nocaps
 
-`site <https://help.ubuntu.com/community/NumLock>`_
-
-Using extra 3rd-party package
+Using extra 3rd-party package `(source) <https://help.ubuntu.com/community/NumLock>`_
 
 .. code-block:: text
 
