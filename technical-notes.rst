@@ -8,8 +8,6 @@ Technical Notes
 New
 ===
 
-.. code-block:: text
-
 Rsync
 ------
 
