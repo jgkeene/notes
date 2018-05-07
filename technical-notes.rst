@@ -19,7 +19,7 @@ Rsync
 Swap caps/ctrl keys
 -------------------
 
-Using only buit-ins `(source) <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_```
+Using only buit-ins `(source) <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_`
 
 .. code-block:: text
 
