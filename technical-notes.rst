@@ -5,6 +5,13 @@ Technical Notes
     :local:
     :depth: 5
 
+
+dconf dump /
+
+deja-dup-preferences
+deja-dup backup
+duplicity
+
 New
 ===
 
@@ -13,6 +20,8 @@ Rsync
 
 .. code-block:: text
 
+    mkdir ~/.rsync-partial
+    
     rsync --verbose --recursive --dry-run --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
     rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
 
