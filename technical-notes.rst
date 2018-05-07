@@ -10,8 +10,8 @@ New
 
 .. code-block:: text
 
-SRsync
------
+Rsync
+------
 
 .. code-block:: text
 
@@ -21,46 +21,42 @@ SRsync
 Swap caps/ctrl keys
 -------------------
 
-Using buit-ins
-
 `site <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_
 
+Using only buit-ins
+
+.. code-block:: text
+
     # For consoles
-    
     sudo vim /etc/default/kebboard 
-    
     # Add this line
     `XKBOPTIONS="ctrl:swapcaps"`
-    
-    # Update the new setting
+    # Update our new setting
     sudo dpkg-reconfigure -phigh console-setup
 
     # For X11
-    
     vim ~/.bashrc
+    # Add this line
     setxkbmap -layout us -option ctrl:nocaps
-
-Using 3rd-party package
 
 `site <https://help.ubuntu.com/community/NumLock>`_
 
-    #  Swap while changing runlevels on every boot
-    sudo vim /etc/rc.local'
-    
-    #sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/rc.local
-# Numlock enable
-[ -x /usr/bin/numlockx ] && numlockx on
+Using extra 3rd-party package
 
-exit 0
-    ' /etc/rc.local
-    
-# maps on X11 start
-sudo vim /etc/X11/xinint/xinit	
-/usr/bin/numlockx on
+.. code-block:: text
 
-# maps on light login
-sudo vim /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
-greeter-setup-script=/usr/bin/numlockx on
+    # For the init scripts
+    sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/rc.local
+   
+    # For X11 start
+    sudo vim /etc/X11/xinit/xinitrc
+    # Add this line
+    /usr/bin/numlockx on
+
+    # For light login
+    sudo vim /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
+    # Add this line
+    greeter-setup-script=/usr/bin/numlockx on
 
 Ubuntu
 ======
