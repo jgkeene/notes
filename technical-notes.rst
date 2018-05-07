@@ -60,6 +60,7 @@ Using only buit-ins `(source) <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_
     # Add this line
     setxkbmap -layout us -option ctrl:nocaps
 
+.. code-block::
 Using extra 3rd-party package `(source) <https://help.ubuntu.com/community/NumLock>`_
 
 .. code-block:: text
