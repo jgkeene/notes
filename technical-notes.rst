@@ -10,37 +10,50 @@ New
 
 .. code-block:: text
 
-Rsync
+SRsync
+-----
 
-rsync --verbose --recursive --dry-run --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
+.. code-block:: text
 
-rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
+    rsync --verbose --recursive --dry-run --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
+    rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
 
+Swap caps/ctrl keys
+-------------------
 
-
-Swap caps/ctrl, using buit-ins
+Using buit-ins
 
 `site <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_
 
-# For consoles
-sudo vim /etc/default/keyboard 
-XKBOPTIONS="ctrl:swapcaps"
-sudo dpkg-reconfigure -phigh console-setup
+    # For consoles
+    
+    sudo vim /etc/default/kebboard 
+    
+    # Add this line
+    `XKBOPTIONS="ctrl:swapcaps"`
+    
+    # Update the new setting
+    sudo dpkg-reconfigure -phigh console-setup
 
-# For X11
-vim ~/.bashrc
-setxkbmap -layout us -option ctrl:nocaps
+    # For X11
+    
+    vim ~/.bashrc
+    setxkbmap -layout us -option ctrl:nocaps
 
-Swap caps/ctrl, using 3rd-party package
+Using 3rd-party package
 
 `site <https://help.ubuntu.com/community/NumLock>`_
 
-# place in init script
-sudo sed -i 's | 
-^exit 0.*$ |
-# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0 |
-' /etc/rc.local
+    #  Swap while changing runlevels on every boot
+    sudo vim /etc/rc.local'
+    
+    #sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/rc.local
+# Numlock enable
+[ -x /usr/bin/numlockx ] && numlockx on
 
+exit 0
+    ' /etc/rc.local
+    
 # maps on X11 start
 sudo vim /etc/X11/xinint/xinit	
 /usr/bin/numlockx on
