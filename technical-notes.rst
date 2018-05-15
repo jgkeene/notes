@@ -77,6 +77,18 @@ Using extra 3rd-party package `(source) <https://help.ubuntu.com/community/NumLo
     sudo vim /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
     # Add this line
     greeter-setup-script=/usr/bin/numlockx on
+    
+Commands    
+========
+
+- ls
+- find
+- sed
+- awk
+- add/del/mod user
+- grant user sudo permission (sudoers)
+- chmod/chown/file permissions
+- 
 
 Ubuntu
 ======
