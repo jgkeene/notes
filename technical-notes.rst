@@ -28,6 +28,12 @@ install java, for
     tr
 
 
+Grant a user sudo permission:
+
+- https://unix.stackexchange.com/questions/179954/username-is-not-in-the-sudoers-file-this-incident-will-be-reported/258865#258865
+- https://wiki.debian.org/sudo
+
+
 New
 ===
 
