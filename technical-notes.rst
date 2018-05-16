@@ -221,9 +221,8 @@ View Files From A Clonezilla Backup
 
 .. code-block:: bash
 
-    sudo su
-    
     # Extract into an image file
+    sudo su
     cat sda2.ext4-ptcl-img.gz.* | gunzip -c | partclone.restore -s - -W -o./sda2.img
 
     # Mount the image file and browse files
