@@ -5,6 +5,16 @@ Technical Notes
     :local:
     :depth: 5
 
+In GNU/Linux
+Tip: Find out the name of your USB drive with lsblk. 
+Make sure that it is not mounted.
+Run the following command, replacing /dev/sdx with your drive, e.g. /dev/sdb.
+(Do not append a partition number, so do not use something like /dev/sdb1)
+
+dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
+
+
+
 syanptic error fix
 http://forums.debian.net/viewtopic.php?f=17&t=133676&start=15
 sudo setfacl -m _apt:rwx /var/lib/update-notifier/package-data-downloads/partial
