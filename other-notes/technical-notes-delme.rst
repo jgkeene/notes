@@ -30,6 +30,15 @@ Ubuntu
 Fix Capslock
 -------------------
 
+Use Gnome Tweak Tool GUI
+
+.. code-block:: bash
+
+    gnome-tweak-tool
+    
+    # Typing>CtrlKeyPosition>"Caps lock as ctrl"
+    # Typing>CapsLockKeyBehavior>"Disabled"
+
 Using only buit-ins `(source) <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_
 
 .. code-block:: text
@@ -83,15 +92,6 @@ Fix Numlock `(Ubuntu Help Wiki) <https://help.ubuntu.com/community/NumLock>`_
     
     # Add this line
     greeter-setup-script=/usr/bin/numlockx on
-
-Map caps-lock to ctrl
-
-.. code-block:: bash
-
-    gnome-tweak-tool
-    
-    # Typing>CtrlKeyPosition>"Caps lock as ctrl"
-    # Typing>CapsLockKeyBehavior>"Disabled"
 
 Clear crashlog
 
