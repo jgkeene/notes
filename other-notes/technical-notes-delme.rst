@@ -27,7 +27,7 @@ Linux Tasks
 Ubuntu
 ======
 
-Swap caps/ctrl keys
+Fix Capslock
 -------------------
 
 Using only buit-ins `(source) <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_
@@ -64,7 +64,8 @@ Using extra 3rd-party package `(source) <https://help.ubuntu.com/community/NumLo
     # Add this line
     greeter-setup-script=/usr/bin/numlockx on
     
-Enable numlock on every boot, both ttys and X11 `(Ubuntu Help Wiki) <https://help.ubuntu.com/community/NumLock>`_
+Fix Numlock `(Ubuntu Help Wiki) <https://help.ubuntu.com/community/NumLock>`_
+------------
 
 .. code-block:: bash
 
