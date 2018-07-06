@@ -154,114 +154,6 @@ A HDD recovery procedure for failed drive
     
     # Try to recover files from image copy
 
-Making Ubuntu Backups
----------------------
-
-Use `Aptik <https://github.com/teejee2008/aptik/>`_ to backup software
-`[releases] <https://github.com/teejee2008/aptik/releases>`_
-`[docs] <https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
-
-.. code-block:: bash
-
-    sudo apt-add-repository -y ppa:teejee2008/ppa
-    sudo apt-get update
-    sudo apt-get install aptik-gtk aptik
-
-Use `Timeshift <https://github.com/teejee2008/timeshift>`_ to backup system files
-`[docs] <https://github.com/teejee2008/timeshift/wiki>`_
-
-.. code-block:: bash
-
-    sudo apt-add-repository -y ppa:teejee2008/ppa
-    sudo apt update
-    sudo apt install timeshift
-
-Use `BackInTime <https://github.com/bit-team/backintime>`_ to backup user files
-`[docs] <http://backintime.readthedocs.io/en/latest/>`_
-
-.. code-block:: bash
-
-    sudo apt-add-repository -y ppa:bit-team/stable
-    sudo apt update
-    sudo apt install backintime-qt4
-    
-View Files From A Clonezilla Backup
------------------------------------
-
-.. code-block:: bash
-
-    # Extract into an image file
-    sudo su
-    cat sda2.ext4-ptcl-img.gz.* | gunzip -c | partclone.restore -s - -W -o./sda2.img
-
-    # Mount the image file and browse files
-    
-Dconf Settings
---------------
-
-.. code-block:: bash
-
-    # dump dconf settings
-    dconf dump / >> ./dump.txt
-    # restore dconf settings
-    dconf load ./dump.txt
-    
-Other Ubuntu Software
----------------------
-
-- ThinkingRock (GTD) `shell script installer <https://trgtd.com.au/index.php/component/rsfiles/download?path=v3.7.0%252FTrial%252FLinux%252Ftr-3.7.0-trial-jre64.sh>`_
-
-View Installed Software 
------------------------
-
-.. code-block:: bash
-
-    # List all installed packages, with version numbers
-    apt list --installed
-    
-    # Lists installed packages (excludes if installed as a dependency), with descriptions
-    aptitude search '~i!~M'
-
-    # Lists installed packages (excludes if installed as a dependency), without descriptions
-    aptitude search -F '%p' '~i'
-    
-    # Shows the installation commands you used, with dates
-    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
-    egrep '^(Start-Date:|Commandline:)' |
-    grep -v aptdaemon |
-    egrep -B1 '^Commandline:'
-
-    # Shows the installation commands you used, without dates
-    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
-    egrep '^(Start-Date:|Commandline:)' |
-    grep -v aptdaemon |
-    egrep '^Commandline:'
-
-Find
-====
-
-Find directories containing specific file extension
-
-.. code-block:: bash
-
-    find . -name "*.mp3" | grep -o '.*/' | sort | uniq
-
-Find files, using multiple keywords
-
-.. code-block:: bash
-
-    find . -type f \( -name "*.py" -o -name "*.txt" \)
-
-Find matching files, line numbers, and highlight
-
-.. code-block:: bash
-
-    # Search through a single file
-    grep -n SEARCHTERM FILE
-
-    # Search through multiple files, recursively
-    grep -r -n SEARCHTERM ./*
-
 
 Run process in background
 
@@ -490,6 +382,115 @@ Pipe to lynx, browse with navigation links
     zcat $(man --path 1 grep) | man2html -l | lynx -stdin
     # Pipe manpage to w3m
     zcat $(man --path 1 grep) | man2html -l | w3m -T text/html
+
+Making Ubuntu Backups
+---------------------
+
+Use `Aptik <https://github.com/teejee2008/aptik/>`_ to backup software
+`[releases] <https://github.com/teejee2008/aptik/releases>`_
+`[docs] <https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
+
+.. code-block:: bash
+
+    sudo apt-add-repository -y ppa:teejee2008/ppa
+    sudo apt-get update
+    sudo apt-get install aptik-gtk aptik
+
+Use `Timeshift <https://github.com/teejee2008/timeshift>`_ to backup system files
+`[docs] <https://github.com/teejee2008/timeshift/wiki>`_
+
+.. code-block:: bash
+
+    sudo apt-add-repository -y ppa:teejee2008/ppa
+    sudo apt update
+    sudo apt install timeshift
+
+Use `BackInTime <https://github.com/bit-team/backintime>`_ to backup user files
+`[docs] <http://backintime.readthedocs.io/en/latest/>`_
+
+.. code-block:: bash
+
+    sudo apt-add-repository -y ppa:bit-team/stable
+    sudo apt update
+    sudo apt install backintime-qt4
+    
+View Files From A Clonezilla Backup
+-----------------------------------
+
+.. code-block:: bash
+
+    # Extract into an image file
+    sudo su
+    cat sda2.ext4-ptcl-img.gz.* | gunzip -c | partclone.restore -s - -W -o./sda2.img
+
+    # Mount the image file and browse files
+    
+Dconf Settings
+--------------
+
+.. code-block:: bash
+
+    # dump dconf settings
+    dconf dump / >> ./dump.txt
+    # restore dconf settings
+    dconf load ./dump.txt
+    
+Other Ubuntu Software
+---------------------
+
+- ThinkingRock (GTD) `shell script installer <https://trgtd.com.au/index.php/component/rsfiles/download?path=v3.7.0%252FTrial%252FLinux%252Ftr-3.7.0-trial-jre64.sh>`_
+
+View Installed Software 
+-----------------------
+
+.. code-block:: bash
+
+    # List all installed packages, with version numbers
+    apt list --installed
+    
+    # Lists installed packages (excludes if installed as a dependency), with descriptions
+    aptitude search '~i!~M'
+
+    # Lists installed packages (excludes if installed as a dependency), without descriptions
+    aptitude search -F '%p' '~i'
+    
+    # Shows the installation commands you used, with dates
+    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
+    egrep '^(Start-Date:|Commandline:)' |
+    grep -v aptdaemon |
+    egrep -B1 '^Commandline:'
+
+    # Shows the installation commands you used, without dates
+    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
+    egrep '^(Start-Date:|Commandline:)' |
+    grep -v aptdaemon |
+    egrep '^Commandline:'
+
+Find
+====
+
+Find directories containing specific file extension
+
+.. code-block:: bash
+
+    find . -name "*.mp3" | grep -o '.*/' | sort | uniq
+
+Find files, using multiple keywords
+
+.. code-block:: bash
+
+    find . -type f \( -name "*.py" -o -name "*.txt" \)
+
+Find matching files, line numbers, and highlight
+
+.. code-block:: bash
+
+    # Search through a single file
+    grep -n SEARCHTERM FILE
+
+    # Search through multiple files, recursively
+    grep -r -n SEARCHTERM ./*
+
 
 Python
 ======
