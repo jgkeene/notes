@@ -5,7 +5,8 @@ Old Technical Notes
     :local:
     :depth: 5
 
-    
+Ubuntu
+======
 
 Swap caps/ctrl keys
 -------------------
