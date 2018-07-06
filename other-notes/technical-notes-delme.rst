@@ -5,6 +5,25 @@ Old Technical Notes
     :local:
     :depth: 5
 
+Linux Commands    
+========
+
+- rsync
+	- mkdir ~/.rsync-partial
+	- rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
+- ls
+- find
+- sed
+- awk
+
+Linux Tasks
+==========
+
+- add/del/mod user
+- grant user sudo permission (sudoers)
+- chmod/chown/file permissions
+
+
 Ubuntu
 ======
 
@@ -45,28 +64,6 @@ Using extra 3rd-party package `(source) <https://help.ubuntu.com/community/NumLo
     # Add this line
     greeter-setup-script=/usr/bin/numlockx on
     
-Linux Commands    
-========
-
-- rsync
-	- mkdir ~/.rsync-partial
-	- rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
-- ls
-- find
-- sed
-- awk
-
-Linux Tasks
-==========
-
-- add/del/mod user
-- grant user sudo permission (sudoers)
-- chmod/chown/file permissions
-
-
-Ubuntu
-======
-
 Enable numlock on every boot, both ttys and X11 `(Ubuntu Help Wiki) <https://help.ubuntu.com/community/NumLock>`_
 
 .. code-block:: bash
