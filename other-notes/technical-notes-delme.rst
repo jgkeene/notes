@@ -5,57 +5,7 @@ Old Technical Notes
     :local:
     :depth: 5
 
-In GNU/Linux
-Tip: Find out the name of your USB drive with lsblk. 
-Make sure that it is not mounted.
-Run the following command, replacing /dev/sdx with your drive, e.g. /dev/sdb.
-(Do not append a partition number, so do not use something like /dev/sdb1)
-
-dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
-
-
-
-syanptic error fix
-http://forums.debian.net/viewtopic.php?f=17&t=133676&start=15
-sudo setfacl -m _apt:rwx /var/lib/update-notifier/package-data-downloads/partial
-# confirm
-getfacl -t /var/lib/update-notifier/package-data-downloads/partial
-
-dconf dump /
-
-deja-dup-preferences
-deja-dup backup
-duplicity
-
-
-https://askubuntu.com/questions/854373/how-to-create-a-desktop-shortcut/854398
-sudo apt-get install --no-install-recommends gnome-panel
-gnome-desktop-item-edit --create-new ~/Desktop
-
-
-install java, for
-    pycharm
-    tr
-
-
-Grant a user sudo permission:
-
-- https://unix.stackexchange.com/questions/179954/username-is-not-in-the-sudoers-file-this-incident-will-be-reported/258865#258865
-- https://wiki.debian.org/sudo
-
-
-New
-===
-
-Rsync
-------
-
-.. code-block:: text
-
-    mkdir ~/.rsync-partial
     
-    rsync --verbose --recursive --dry-run --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
-    rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
 
 Swap caps/ctrl keys
 -------------------
@@ -94,17 +44,24 @@ Using extra 3rd-party package `(source) <https://help.ubuntu.com/community/NumLo
     # Add this line
     greeter-setup-script=/usr/bin/numlockx on
     
-Commands    
+Linux Commands    
 ========
 
+- rsync
+	- mkdir ~/.rsync-partial
+	- rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
 - ls
 - find
 - sed
 - awk
+
+Linux Tasks
+==========
+
 - add/del/mod user
 - grant user sudo permission (sudoers)
 - chmod/chown/file permissions
-- 
+
 
 Ubuntu
 ======
@@ -278,7 +235,7 @@ View Installed Software
     grep -v aptdaemon |
     egrep '^Commandline:'
 
-Bash
+Find
 ====
 
 Find directories containing specific file extension
@@ -302,6 +259,7 @@ Find matching files, line numbers, and highlight
 
     # Search through multiple files, recursively
     grep -r -n SEARCHTERM ./*
+
 
 Run process in background
 
@@ -328,12 +286,6 @@ Customize grub bootloader through GUI
 
     sudo apt-add-repository -y ppa:danielrichter2007/grub-customizer
 
-Copy files
-
-.. code-block:: bash
-
-    rsync -avhr --no-compress --progress
-
 Create application shortcut on desktop:
 
 .. code-block:: bash
@@ -355,11 +307,6 @@ Batch rename files
         mv file_$i `printf file_0$i`
     done
 
-Securely delete files (similar programs do the same: srm, sfill, sswap, sdmem)
-
-.. code-block:: bash
-
-    srm -rvl ./*.html*
 
 Use cronjobs
 
