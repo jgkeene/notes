@@ -99,7 +99,7 @@ Fix Numlock `(Ubuntu Help Wiki) <https://help.ubuntu.com/community/NumLock>`_
     # Add this line
     greeter-setup-script=/usr/bin/numlockx on
 
-Misc Fixes
+Misc Tasks
 -----------
 
 Clear crashlog
