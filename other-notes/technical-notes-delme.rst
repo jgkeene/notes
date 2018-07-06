@@ -13,6 +13,12 @@ Linux Commands
 	- rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
 - ls
 - find
+    - find . -name "*.mp3" | grep -o '.*/' | sort | uniq
+    - find . -type f \( -name "*.py" -o -name "*.txt" \)
+    - # Search through a single file
+    - grep -n SEARCHTERM FILE
+    - # Search through multiple files, recursively
+    - grep -r -n SEARCHTERM ./*
 - sed
 - awk
 
@@ -465,32 +471,6 @@ View Installed Software
     egrep '^(Start-Date:|Commandline:)' |
     grep -v aptdaemon |
     egrep '^Commandline:'
-
-Find
-====
-
-Find directories containing specific file extension
-
-.. code-block:: bash
-
-    find . -name "*.mp3" | grep -o '.*/' | sort | uniq
-
-Find files, using multiple keywords
-
-.. code-block:: bash
-
-    find . -type f \( -name "*.py" -o -name "*.txt" \)
-
-Find matching files, line numbers, and highlight
-
-.. code-block:: bash
-
-    # Search through a single file
-    grep -n SEARCHTERM FILE
-
-    # Search through multiple files, recursively
-    grep -r -n SEARCHTERM ./*
-
 
 Python
 ======
