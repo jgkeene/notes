@@ -102,80 +102,57 @@ Debugging
 
     python -m pydb my_script.py
 
-
-Vim
-===
-
-Opening files from shell
+C & C++
+=======
 
 .. code-block:: bash
 
-    # Open in tabs
-    vim -p FILE FILE FILE
-    
-    # Open in splits
-    vim -O FILE FILE FILE
+sudo apt install build-essential      # c compiler
+sudo apt install lldb-3.6             # lldb
+sudo apt install valgrind             # valgrind
+sudo apt install lib64asan0           # address sanitizer
+sudo apt install ack-grep             # ack-grep
+sudo apt install splint               # splint
 
-Important commands
+# Pass arguments among your program and the debugger
+gdb --args
 
-.. code-block:: text
+# Dump backtrace for all threads (useful)
+thread apply all bt
 
-    daw              		" Deleteword, better than 'dw'
-    I                		" Begin of line, better than '0i'
-    yiw              		" Copy word you're in
-    mm -> `m         		" Mark cursor pos. as 'm' -> goto mark 'm'
-    
-    ctrl-w h        		" Move split left
-    ctrl-w l       		" Move split right
-    
-    bo sp  			" Split horizontally across all windows
-    
-    z <cr> 			" Bring cursor position and screen to top of window
-    
-    z-R                 	" Open all folds
-    z-M                     	" Close all folds
-    
-    g;                		" Goto prev edit position
-    g,                		" Goto next edit position
-    changes          		" List all edit positions
-    
-    =                 		" Auto-indent selected lines
-    gg -> =G        		" Auto-indent all lines
-    
-    ctrl-pgUp          		" Goto next tab
-    ctrl-pgDown        		" Goto prev tab
-    
-    :set list     		" Show hidden chars (tabs, spaces, etc..)
-    :set nolist  		" Hide hidden chars (tabs, spaces, etc..)
-    
-    :set colorcolumn=79     	" Draw vertical column
-    
-    :set colorscheme? 		" Check a setting 
-    
-    %s/^M$//g               	" Remove ^M chars (to get ^M in vim, type c-V -> c-M)
-    
-    qd                  	" Start recording macro to register d (possible registers are [a-z])
-    q                   	" Stop recording macro
-    @d                  	" Execute your macro
-    @@                  	" Execute your macro again
-    '<,'>normal @d      	" Execute your macro on a visual selection
-    
-    dt<     			" Delete till a char (ex: '<')
-    
-    =                   	" Auto-indent selected lines
-    gg =G               	" Auto-indent all lines
-    
-    tabedit FILE 		" Open file into a new-tab
-    
-    yO -> (paste)     		" Paste and preserve formatting
-    
-    '{' & '}'           	" Jump through paragraphs
-    '(' & ')'           	" Jump through sentences
-    %                   	" Jump between braces/parens/etc
-    
-    g/^$/d                 	" Delete empty lines in insert mode
-    '<,'>g/^$/d            	" Delete empty lines in visual mode
+# Run program, and provide backtrace if it bombs
+gdb --batch --ex r --ex bt --ex q --args
 
-    :/\s\+$/     		" Hilight whitespace chars
+Compiling commands
 
-    :set ff=unix     		" Convert a Windows file into a unix file
+.. code-block:: bash
+
+# Src -> obj -> shared obj
+cc -shared -o libex29.so -fPIC libex29.c
+
+# Src -> binary
+cc -Wall -g -DNDEBUG ex29.c -ldl -o ex29
+
+Install gcc manpages
+
+.. code-block:: bash
+
+sudo apt install manpages-dev
+sudo apt install manpages-posix-dev
+sudo apt install glibc-doc
+
+C degubbers
+
+.. code-block:: bash
+
+# equalx
+sudo apt-add-repository -y ppa:q-quark/equalx
+sudo apt update
+sudo apt install equalx
+
+#lyx
+sudo apt-add-repository -y ppa:lyx-devel/release
+sudo apt update
+sudo apt install lyx
+
+
