@@ -1,6 +1,10 @@
 Debian 
 ########
 
+.. contents::
+    :local:
+    :depth: 5
+
 From "Debian Manual"
 ===================
 - Every file has an inode that stores it's attributes (user/group ownership, various timestamps)
