@@ -54,12 +54,7 @@ find
 
 ``find . -size +1M``
 
-``find . \
-  -type f -not -perm 0600 -or \
-  -type d -not -perm 0700``
-
-find . \( -type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)
-
+``find . \( -type f -not -perm 0600 \)-or  \( -type d -not -perm 0700 \)``
 
 # The + sign is faster and formats better than using the \ sign
 find . -type f -exec cat '{}' \;
