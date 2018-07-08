@@ -25,8 +25,8 @@ They exclude files using ``-prune -or`` for ``find``
 .. code-block:: bash
 
   find . \
-    -type d -regex ".*/\.git" -prune -or
-    -type d -regex ".*/\.idea" -prune -or
+    -type d -regex ".*/\.git" -prune -or \
+    -type d -regex ".*/\.idea" -prune -or \
     -type f -size +10M -prune -print0
 
 
