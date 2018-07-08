@@ -9,7 +9,7 @@ From "Debian Manual"
 ===================
 - Every file has an inode that stores it's attributes (user/group ownership, various timestamps)
 - There are three timestamps: atime (accessed), mtime (modified), ctime (changed ownership/permission)
-- They use this for ``rsync``
+- They use `-aHAXSv` for ``rsync``
 
 .. code-block:: bash
 
@@ -23,7 +23,9 @@ From "Debian Manual"
     -type d -regex ".*/\.git" -prune -or
     -type d -regex ".*/\.idea" -prune -or
     -type f -size +10M -prune -or-print0
-       
+
+- Use `fc` to edit a long command in vim and then run it       
+
 Nostarch
 ========
 - 

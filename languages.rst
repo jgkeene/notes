@@ -179,4 +179,3 @@ Important commands
     :/\s\+$/     		" Hilight whitespace chars
 
     :set ff=unix     		" Convert a Windows file into a unix file
-
