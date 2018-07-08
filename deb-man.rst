@@ -8,26 +8,31 @@ TR
 
 1
 ====
-- Every kind of filesystem object (files, directories, devices, named-pipes) has a datastruct called an *inode* that stores the attributes (user/group ownership, various timestamps)
+- Everything is a file: file-files, directory-files, device-files, named-pipe-files
+- Every file has a datastruct called an *inode* that stores it's attributes (user/group ownership, various timestamps)
 - There are three timestamps:
         - **atime**: accessed (`ls -lu`)
         - **mtime**: modified (`ls -l`)
         - **ctime**: changed owner/permission (`ls -lc`)
-- Use the first bit of `ls` to tell if it's a normal, directory, symlink, character-device, block-device, named-pipe, or socket file
-- Use `umask -p` or `umask -S` to
+- The first bit of `ls` tells if the file is a symlink, character-device, block-device, named-pipe, or socket-file
 
+.. code-block:: bash
+    
+        rsync -aHAXSv ./source/ /etst
 
+.. code-block:: ba 
 
-Setup
+        find . \
+                -type d -regex ".*/\.git" -prune -o
+                -type d -regex ".*/\.idea" -prune -o
+                -type f -size +10M -prune -o -print0
+        
+
+Test
 ====
+- `echo 123 \
+123123123 \
+12312312312`
 
-Thoughts: Dump & Process 
-====
-
-Actions: Review & Do
-====
-
-Projects: Review & Plan
-====
 
 
