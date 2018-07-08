@@ -5,60 +5,45 @@ Old Technical Notes
     :local:
     :depth: 5
 
-In GNU/Linux
-Tip: Find out the name of your USB drive with lsblk. 
-Make sure that it is not mounted.
-Run the following command, replacing /dev/sdx with your drive, e.g. /dev/sdb.
-(Do not append a partition number, so do not use something like /dev/sdb1)
+Linux Commands    
+========
 
-dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
+- rsync
+	- mkdir ~/.rsync-partial
+	- rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
+- ls
+- find
+    - find . -name "*.mp3" | grep -o '.*/' | sort | uniq
+    - find . -type f \( -name "*.py" -o -name "*.txt" \)
+    - # Search through a single file
+    - grep -n SEARCHTERM FILE
+    - # Search through multiple files, recursively
+    - grep -r -n SEARCHTERM ./*
+- sed
+- awk
 
+Linux Tasks
+==========
 
-
-syanptic error fix
-http://forums.debian.net/viewtopic.php?f=17&t=133676&start=15
-sudo setfacl -m _apt:rwx /var/lib/update-notifier/package-data-downloads/partial
-# confirm
-getfacl -t /var/lib/update-notifier/package-data-downloads/partial
-
-dconf dump /
-
-deja-dup-preferences
-deja-dup backup
-duplicity
-
-
-https://askubuntu.com/questions/854373/how-to-create-a-desktop-shortcut/854398
-sudo apt-get install --no-install-recommends gnome-panel
-gnome-desktop-item-edit --create-new ~/Desktop
+- add/del/mod user
+- grant user sudo permission (sudoers)
+- chmod/chown/file permissions
 
 
-install java, for
-    pycharm
-    tr
+Ubuntu
+======
 
-
-Grant a user sudo permission:
-
-- https://unix.stackexchange.com/questions/179954/username-is-not-in-the-sudoers-file-this-incident-will-be-reported/258865#258865
-- https://wiki.debian.org/sudo
-
-
-New
-===
-
-Rsync
-------
-
-.. code-block:: text
-
-    mkdir ~/.rsync-partial
-    
-    rsync --verbose --recursive --dry-run --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
-    rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
-
-Swap caps/ctrl keys
+Fix Capslock
 -------------------
+
+Use Gnome Tweak Tool GUI
+
+.. code-block:: bash
+
+    gnome-tweak-tool
+    
+    # Typing>CtrlKeyPosition>"Caps lock as ctrl"
+    # Typing>CapsLockKeyBehavior>"Disabled"
 
 Using only buit-ins `(source) <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_
 
@@ -94,22 +79,8 @@ Using extra 3rd-party package `(source) <https://help.ubuntu.com/community/NumLo
     # Add this line
     greeter-setup-script=/usr/bin/numlockx on
     
-Commands    
-========
-
-- ls
-- find
-- sed
-- awk
-- add/del/mod user
-- grant user sudo permission (sudoers)
-- chmod/chown/file permissions
-- 
-
-Ubuntu
-======
-
-Enable numlock on every boot, both ttys and X11 `(Ubuntu Help Wiki) <https://help.ubuntu.com/community/NumLock>`_
+Fix Numlock `(Ubuntu Help Wiki) <https://help.ubuntu.com/community/NumLock>`_
+------------
 
 .. code-block:: bash
 
@@ -128,14 +99,8 @@ Enable numlock on every boot, both ttys and X11 `(Ubuntu Help Wiki) <https://hel
     # Add this line
     greeter-setup-script=/usr/bin/numlockx on
 
-Map caps-lock to ctrl
-
-.. code-block:: bash
-
-    gnome-tweak-tool
-    
-    # Typing>CtrlKeyPosition>"Caps lock as ctrl"
-    # Typing>CapsLockKeyBehavior>"Disabled"
+Misc Tasks
+-----------
 
 Clear crashlog
 
@@ -195,113 +160,6 @@ A HDD recovery procedure for failed drive
     
     # Try to recover files from image copy
 
-Making Ubuntu Backups
----------------------
-
-Use `Aptik <https://github.com/teejee2008/aptik/>`_ to backup software
-`[releases] <https://github.com/teejee2008/aptik/releases>`_
-`[docs] <https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
-
-.. code-block:: bash
-
-    sudo apt-add-repository -y ppa:teejee2008/ppa
-    sudo apt-get update
-    sudo apt-get install aptik-gtk aptik
-
-Use `Timeshift <https://github.com/teejee2008/timeshift>`_ to backup system files
-`[docs] <https://github.com/teejee2008/timeshift/wiki>`_
-
-.. code-block:: bash
-
-    sudo apt-add-repository -y ppa:teejee2008/ppa
-    sudo apt update
-    sudo apt install timeshift
-
-Use `BackInTime <https://github.com/bit-team/backintime>`_ to backup user files
-`[docs] <http://backintime.readthedocs.io/en/latest/>`_
-
-.. code-block:: bash
-
-    sudo apt-add-repository -y ppa:bit-team/stable
-    sudo apt update
-    sudo apt install backintime-qt4
-    
-View Files From A Clonezilla Backup
------------------------------------
-
-.. code-block:: bash
-
-    # Extract into an image file
-    sudo su
-    cat sda2.ext4-ptcl-img.gz.* | gunzip -c | partclone.restore -s - -W -o./sda2.img
-
-    # Mount the image file and browse files
-    
-Dconf Settings
---------------
-
-.. code-block:: bash
-
-    # dump dconf settings
-    dconf dump / >> ./dump.txt
-    # restore dconf settings
-    dconf load ./dump.txt
-    
-Other Ubuntu Software
----------------------
-
-- ThinkingRock (GTD) `shell script installer <https://trgtd.com.au/index.php/component/rsfiles/download?path=v3.7.0%252FTrial%252FLinux%252Ftr-3.7.0-trial-jre64.sh>`_
-
-View Installed Software 
------------------------
-
-.. code-block:: bash
-
-    # List all installed packages, with version numbers
-    apt list --installed
-    
-    # Lists installed packages (excludes if installed as a dependency), with descriptions
-    aptitude search '~i!~M'
-
-    # Lists installed packages (excludes if installed as a dependency), without descriptions
-    aptitude search -F '%p' '~i'
-    
-    # Shows the installation commands you used, with dates
-    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
-    egrep '^(Start-Date:|Commandline:)' |
-    grep -v aptdaemon |
-    egrep -B1 '^Commandline:'
-
-    # Shows the installation commands you used, without dates
-    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
-    egrep '^(Start-Date:|Commandline:)' |
-    grep -v aptdaemon |
-    egrep '^Commandline:'
-
-Bash
-====
-
-Find directories containing specific file extension
-
-.. code-block:: bash
-
-    find . -name "*.mp3" | grep -o '.*/' | sort | uniq
-
-Find files, using multiple keywords
-
-.. code-block:: bash
-
-    find . -type f \( -name "*.py" -o -name "*.txt" \)
-
-Find matching files, line numbers, and highlight
-
-.. code-block:: bash
-
-    # Search through a single file
-    grep -n SEARCHTERM FILE
-
-    # Search through multiple files, recursively
-    grep -r -n SEARCHTERM ./*
 
 Run process in background
 
@@ -328,12 +186,6 @@ Customize grub bootloader through GUI
 
     sudo apt-add-repository -y ppa:danielrichter2007/grub-customizer
 
-Copy files
-
-.. code-block:: bash
-
-    rsync -avhr --no-compress --progress
-
 Create application shortcut on desktop:
 
 .. code-block:: bash
@@ -355,11 +207,6 @@ Batch rename files
         mv file_$i `printf file_0$i`
     done
 
-Securely delete files (similar programs do the same: srm, sfill, sswap, sdmem)
-
-.. code-block:: bash
-
-    srm -rvl ./*.html*
 
 Use cronjobs
 
@@ -541,6 +388,89 @@ Pipe to lynx, browse with navigation links
     zcat $(man --path 1 grep) | man2html -l | lynx -stdin
     # Pipe manpage to w3m
     zcat $(man --path 1 grep) | man2html -l | w3m -T text/html
+
+Making Ubuntu Backups
+---------------------
+
+Use `Aptik <https://github.com/teejee2008/aptik/>`_ to backup software
+`[releases] <https://github.com/teejee2008/aptik/releases>`_
+`[docs] <https://github.com/teejee2008/aptik/blob/master/MANUAL.md>`_
+
+.. code-block:: bash
+
+    sudo apt-add-repository -y ppa:teejee2008/ppa
+    sudo apt-get update
+    sudo apt-get install aptik-gtk aptik
+
+Use `Timeshift <https://github.com/teejee2008/timeshift>`_ to backup system files
+`[docs] <https://github.com/teejee2008/timeshift/wiki>`_
+
+.. code-block:: bash
+
+    sudo apt-add-repository -y ppa:teejee2008/ppa
+    sudo apt update
+    sudo apt install timeshift
+
+Use `BackInTime <https://github.com/bit-team/backintime>`_ to backup user files
+`[docs] <http://backintime.readthedocs.io/en/latest/>`_
+
+.. code-block:: bash
+
+    sudo apt-add-repository -y ppa:bit-team/stable
+    sudo apt update
+    sudo apt install backintime-qt4
+    
+View Files From A Clonezilla Backup
+-----------------------------------
+
+.. code-block:: bash
+
+    # Extract into an image file
+    sudo su
+    cat sda2.ext4-ptcl-img.gz.* | gunzip -c | partclone.restore -s - -W -o./sda2.img
+
+    # Mount the image file and browse files
+    
+Dconf Settings
+--------------
+
+.. code-block:: bash
+
+    # dump dconf settings
+    dconf dump / >> ./dump.txt
+    # restore dconf settings
+    dconf load ./dump.txt
+    
+Other Ubuntu Software
+---------------------
+
+- ThinkingRock (GTD) `shell script installer <https://trgtd.com.au/index.php/component/rsfiles/download?path=v3.7.0%252FTrial%252FLinux%252Ftr-3.7.0-trial-jre64.sh>`_
+
+View Installed Software 
+-----------------------
+
+.. code-block:: bash
+
+    # List all installed packages, with version numbers
+    apt list --installed
+    
+    # Lists installed packages (excludes if installed as a dependency), with descriptions
+    aptitude search '~i!~M'
+
+    # Lists installed packages (excludes if installed as a dependency), without descriptions
+    aptitude search -F '%p' '~i'
+    
+    # Shows the installation commands you used, with dates
+    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
+    egrep '^(Start-Date:|Commandline:)' |
+    grep -v aptdaemon |
+    egrep -B1 '^Commandline:'
+
+    # Shows the installation commands you used, without dates
+    (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
+    egrep '^(Start-Date:|Commandline:)' |
+    grep -v aptdaemon |
+    egrep '^Commandline:'
 
 Python
 ======
