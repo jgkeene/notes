@@ -66,17 +66,16 @@ find
 
 Misc
 ----
-- ``diff -u  oldfile newfile > patchfile`` then ``patch oldfile < patchfile``
-- ``stat`` ?
-- ``fc `` ?
-- ``umask `` ?
-- ``help (bash's own interactive help)  `` ?
 
+.. code-block:: bash
 
-
-
-
-
+  diff -u  oldfile newfile > patchfile 
+  then patch oldfile < patchfile
+  
+  stat ?
+  fc  ?
+  umask ?
+  help ? (interactive help)
 
 Docs
 ====
