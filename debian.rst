@@ -52,29 +52,25 @@ tar
 find
 -----
 
-``find . -size +1M``
+.. code-block:: bash
 
-``find . \( -type f -not -perm 0600 \)-or  \( -type d -not -perm 0700 \)``
+  find . -size +1M
+  find . \( -type f -not -perm 0600 \)-or  \( -type d -not -perm 0700 \)
+  # The + sign is faster and formats better than using the \ sign
+  find . -type f -exec cat '{}' \;
+  find . -type f -exec cat '{}' +
+  # Using print & xargs is equivalent to using exec
+  find . print | xargs cat 
+  # To protect against filenames with escape chars, use print0 & null when using xargs
+  find . -print0 | xargs -null cat
 
-# The + sign is faster and formats better than using the \ sign
-find . -type f -exec cat '{}' \;
-find . -type f -exec cat '{}' +
-
-# Using print & xargs is equivalent to using exec
-find . print | xargs cat 
-
-# To protect against filenames with escape chars, use print0 & null when using xargs
-find . -print0 | xargs -null cat
-
-
-diff -u  oldfile newfile > patchfile
-patch oldfile < patchfile
-
-
-- stat
-- fc
-- umask
-- help (bash's own interactive help) 
+Misc
+----
+- ``diff -u  oldfile newfile > patchfile`` then ``patch oldfile < patchfile``
+- ``stat`` ?
+- ``fc `` ?
+- ``umask `` ?
+- ``help (bash's own interactive help)  `` ?
 
 
 
