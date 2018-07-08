@@ -8,11 +8,13 @@ Deb
 - They use this for rsync:
 
 .. code-block:: bash
+
   rsync -aHAXSv ./source/ /dest
 
 - They use this for finding files
 
 .. code-block:: bash
+
   find . \
     -type d -regex ".*/\.git" -prune -o
     -type d -regex ".*/\.idea" -prune -o
