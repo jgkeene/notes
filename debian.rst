@@ -52,11 +52,11 @@ tar
 find
 -----
 
-find . -size +1M
+``find . -size +1M``
 
-find . \
+``find . \
   -type f -not -perm 0600 -or \
-  -type d -not -perm 0700
+  -type d -not -perm 0700``
 
 find . \( -type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)
 
