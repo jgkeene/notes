@@ -5,10 +5,6 @@ Debian
     :local:
     :depth: 5
 
-- Every file has a 4 digit **umask** that specifies rwx permissions and filetype
-- Every file has a datastruct called an **inode** that stores permissions and timestamps
-- There are three timestamps: **atime** (accessed), **mtime** (modified), **ctime** (changed ownership/permission)
-
 Commands
 ========
 
@@ -76,6 +72,14 @@ Misc
   fc  ?
   umask ?
   help ? (interactive help)
+
+
+Discussion
+==========
+- Every file has a 4 digit **umask** that specifies rwx permissions and filetype
+- Every file has a datastruct called an **inode** that stores permissions and timestamps
+- There are three timestamps: **atime** (accessed), **mtime** (modified), **ctime** (changed ownership/permission)
+
 
 Docs
 ====
