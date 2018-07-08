@@ -83,7 +83,6 @@ Discussion
 
 Docs
 ====
-- `Docs <https://www.debian.org/doc/>`_
-- `Wiki <https://wiki.debian.org/>`_
 - `Manpages <https://manpages.debian.org/>`_
+- `Docs <https://www.debian.org/doc/>`_
 
