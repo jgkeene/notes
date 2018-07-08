@@ -72,6 +72,9 @@ find . print | xargs cat
 find . -print0 | xargs -null cat
 
 
+diff -u  oldfile newfile > patchfile
+patch oldfile < patchfile
+
 
 - stat
 - fc
