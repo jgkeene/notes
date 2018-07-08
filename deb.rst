@@ -1,29 +1,27 @@
 Deb
 #####
 
-.. contents::
-    :local:
-    :depth: 5
-
 1
 ====
 
- Every file has an *inode* that stores it's attributes (user/group ownership, various timestamps)
+Every file has an *inode* that stores it's attributes (user/group ownership, various timestamps)
 
- There are three timestamps: atime (accessed), mtime (modified), ctime (changed ownership/permission)
+There are three timestamps: atime (accessed), mtime (modified), ctime (changed ownership/permission)
 
- They use this for rsync:
-
-.. code-block:: bash
-    rsync -aHAXSv ./source/ /dest
-
- They use this for finding files
+They use this for rsync:
 
 .. code-block:: bash
-    find . \
-        -type d -regex ".*/\.git" -prune -o
-        -type d -regex ".*/\.idea" -prune -o
-        -type f -size +10M -prune -o -print0
+  
+  rsync -aHAXSv ./source/ /dest
+
+They use this for finding files
+
+.. code-block:: bash
+
+  find . \
+    -type d -regex ".*/\.git" -prune -o
+    -type d -regex ".*/\.idea" -prune -o
+    -type f -size +10M -prune -o -print0
         
 
 
