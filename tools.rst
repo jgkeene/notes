@@ -33,6 +33,35 @@ grep
   grep -n SEARCHTERM FILE
 
 
+curl
+-----
+
+.. code-block:: bash
+
+# Downlaod a file
+curl URL --output FILE
+# DownloadURL  multiple files matching a patterns
+curl URL 2> /dev/null |
+  grep -iE '(FUCK|YOU)' |
+  sed -E 's/^.*href="(.*)".*$/\1/' |
+  while read line; do
+  echo "http://www.whyprime.com/temp/destroy_all_software/"$line
+  done
+
+awk
+-----
+
+.. code-block:: bash
+
+# Print the nth word (awk treats whitespace as word delimeters)
+awk '{print $1}'
+
+
+
+
+
+
+
 Linux Tasks
 ==========
 
@@ -55,6 +84,32 @@ zcat $(man --path 1 grep) | man2html -l | lynx -stdin
 # w3m 
 zcat $(man --path 1 grep) | man2html -l | w3m -T text/html
 
+Monitor a scheduled crontab job
+-------------------------------
+
+.. code-block:: bash
+
+watch -c -d -n 1 tail /var/log/syslog
+
+Converting files
+------------------
+
+.. code-block:: bash
+
+# image to pdf
+convert IMAGEFILE{1..3}.jpg OUT.pdf
+# txt to pdf
+soffice --headless --convert-to pdf in.txt
+# pdf to txt
+pdftotext IN.pdf OUT.txt
+# combine pdfs
+pdfunite ./*.pdf OUT.pdf
+# grep pdfs, recursively
+pdfgrep -HiR 'pattern' /path
+# giff pdfs
+pdfdiff FILE1.pdf FILE2.pdf
+
+
 View Files From A Clonezilla Backup
 -----------------------------------
 
@@ -63,14 +118,6 @@ View Files From A Clonezilla Backup
 # Extract into an image file
 sudo su
 cat sda2.ext4-ptcl-img.gz.* | gunzip -c | partclone.restore -s - -W -o./sda2.img
-
-
-Monitor a scheduled crontab job
--------------------------------
-
-.. code-block:: bash
-
-watch -c -d -n 1 tail /var/log/syslog
 
 
 Vim
