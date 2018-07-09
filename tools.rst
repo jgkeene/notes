@@ -60,10 +60,10 @@ awk
   awk '{print $1}'
 
 Linux Tasks
-==========
+------------
 
 Viewing Manpages
------------------
+~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -82,14 +82,15 @@ Viewing Manpages
   zcat $(man --path 1 grep) | man2html -l | w3m -T text/html
 
 Monitor A Scheduled Crontab Job
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 .. code-block:: bash
 
   watch -c -d -n 1 tail /var/log/syslog
 
 Converting Files
-------------------
+~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -107,7 +108,7 @@ Converting Files
   pdfdiff FILE1.pdf FILE2.pdf
 
 View Files From A Clonezilla Backup
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
