@@ -5,13 +5,13 @@ Misc
   :local:
   :depth: 5
 
-Linux Commands    
+Linux Commands
 ========
 
 rsync
 -----
 
-.. code-block:: bash
+.. code-block:: bash11
 
   rsync --verbose --recursive --times --partial-dir=/home/azhee/.rsync-partial --info=progress2 SOURCE DEST
 
@@ -28,7 +28,7 @@ grep
 -----
 
 .. code-block:: bash
-  
+
   grep -n SEARCHTERM FILE
 
 
@@ -103,7 +103,7 @@ gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime
 # Automatic mount, via fstab
 mkdir /media/azhee/nfs
 sudo vim /etc/fstab
-//192.168.0.3/nfs  /media/azhee/nfs  cifs  rw,_netdev,username=0,password=0,users  0 0 
+//192.168.0.3/nfs  /media/azhee/nfs  cifs  rw,_netdev,username=0,password=0,users  0 0
 mount | grep cifs
 //192.168.0.3/nfs on /media/azhee/nfs type cifs (rw,nosuid,nodev,relatime,vers=default,cache=strict,username=0,domain=,uid=1000,forceuid,gid=1000,forcegid,addr=192.168.0.3,file_mode=0755,dir_mode=0755,nounix,serverino,mapposix,rsize=1048576,wsize=1048576,echo_interval=60,actimeo=1,_netdev)
 
@@ -158,7 +158,7 @@ Other Ubuntu Software
 
 - ThinkingRock (GTD) `shell script installer <https://trgtd.com.au/index.php/component/rsfiles/download?path=v3.7.0%252FTrial%252FLinux%252Ftr-3.7.0-trial-jre64.sh>`_
 
-View Installed Software 
+View Installed Software
 -----------------------
 
 .. code-block:: bash
@@ -232,7 +232,7 @@ ctrl-pgDown           " Goto prev tab
 
 :set colorcolumn=79       " Draw vertical column
 
-:set colorscheme?     " Check a setting 
+:set colorscheme?     " Check a setting
 
 %s/^M$//g                 " Remove ^M chars (to get ^M in vim, type c-V -> c-M)
 
@@ -294,4 +294,3 @@ Steganography
 -------------
 
 Youtube presentations `1 <https://www.youtube.com/watch?v=_j1LWehywgc>`_ `2 <https://www.youtube.com/watch?v=BcDbKlz06no>`_ `3 <https://www.youtube.com/watch?v=BQPkRlbVFEs>`_
-
