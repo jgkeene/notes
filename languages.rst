@@ -5,8 +5,6 @@ Technical Notes
     :local:
     :depth: 5
 
-
-
 Python
 ======
 
@@ -107,52 +105,52 @@ C & C++
 
 .. code-block:: bash
 
-sudo apt install build-essential      # c compiler
-sudo apt install lldb-3.6             # lldb
-sudo apt install valgrind             # valgrind
-sudo apt install lib64asan0           # address sanitizer
-sudo apt install ack-grep             # ack-grep
-sudo apt install splint               # splint
+  sudo apt install build-essential      # c compiler
+  sudo apt install lldb-3.6             # lldb
+  sudo apt install valgrind             # valgrind
+  sudo apt install lib64asan0           # address sanitizer
+  sudo apt install ack-grep             # ack-grep
+  sudo apt install splint               # splint
 
-# Pass arguments among your program and the debugger
-gdb --args
+  # Pass arguments among your program and the debugger
+  gdb --args
 
-# Dump backtrace for all threads (useful)
-thread apply all bt
+  # Dump backtrace for all threads (useful)
+  thread apply all bt
 
-# Run program, and provide backtrace if it bombs
-gdb --batch --ex r --ex bt --ex q --args
+  # Run program, and provide backtrace if it bombs
+  gdb --batch --ex r --ex bt --ex q --args
 
 Compiling commands
 
 .. code-block:: bash
 
-# Src -> obj -> shared obj
-cc -shared -o libex29.so -fPIC libex29.c
+  # Src -> obj -> shared obj
+  cc -shared -o libex29.so -fPIC libex29.c
 
-# Src -> binary
-cc -Wall -g -DNDEBUG ex29.c -ldl -o ex29
+  # Src -> binary
+  cc -Wall -g -DNDEBUG ex29.c -ldl -o ex29
 
 Install gcc manpages
 
 .. code-block:: bash
 
-sudo apt install manpages-dev
-sudo apt install manpages-posix-dev
-sudo apt install glibc-doc
+  sudo apt install manpages-dev
+  sudo apt install manpages-posix-dev
+  sudo apt install glibc-doc
 
 C degubbers
 
 .. code-block:: bash
 
-# equalx
-sudo apt-add-repository -y ppa:q-quark/equalx
-sudo apt update
-sudo apt install equalx
+  # equalx
+  sudo apt-add-repository -y ppa:q-quark/equalx
+  sudo apt update
+  sudo apt install equalx
 
-#lyx
-sudo apt-add-repository -y ppa:lyx-devel/release
-sudo apt update
-sudo apt install lyx
+  #lyx
+  sudo apt-add-repository -y ppa:lyx-devel/release
+  sudo apt update
+  sudo apt install lyx
 
 
