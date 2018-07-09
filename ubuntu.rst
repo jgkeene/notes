@@ -10,8 +10,8 @@ Keyboard Fixes
 -----------------
 
 - Capslock `(source) <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_ 
-- Numlock`(source) <https://help.ubuntu.com/community/NumLock>`_ 
-- Numlock`(source) <https://help.ubuntu.com/community/NumLock>`_
+- Numlock `(source) <https://help.ubuntu.com/community/NumLock>`_ 
+- Numlock `(source) <https://help.ubuntu.com/community/NumLock>`_
 
 
 Setting Up SMB Shares
