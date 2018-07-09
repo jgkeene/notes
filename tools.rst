@@ -1,16 +1,19 @@
-Misc
-####
+Tools
+#####
 
 .. contents::
   :local:
   :depth: 5
 
 
+Linux
+======
+
 Linux Commands
-===============
+-----------------
 
 rsync
------
+~~~~~
 
 .. code-block:: bash11
 
@@ -18,7 +21,7 @@ rsync
 
 
 find
------
+~~~~~
 
 .. code-block:: bash
 
@@ -26,7 +29,7 @@ find
   find . -type f \( -name "*.py" -o -name "*.txt" \)
 
 grep
------
+~~~~~
 
 .. code-block:: bash
 
@@ -34,7 +37,7 @@ grep
 
 
 curl
------
+~~~~~
 
 .. code-block:: bash
 
@@ -49,7 +52,7 @@ curl
     done
 
 awk
------
+~~~~
 
 .. code-block:: bash
 
@@ -78,14 +81,14 @@ Viewing Manpages
   # w3m 
   zcat $(man --path 1 grep) | man2html -l | w3m -T text/html
 
-Monitor a scheduled crontab job
+Monitor A Scheduled Crontab Job
 -------------------------------
 
 .. code-block:: bash
 
   watch -c -d -n 1 tail /var/log/syslog
 
-Converting files
+Converting Files
 ------------------
 
 .. code-block:: bash
@@ -103,7 +106,6 @@ Converting files
   # giff pdfs
   pdfdiff FILE1.pdf FILE2.pdf
 
-
 View Files From A Clonezilla Backup
 -----------------------------------
 
@@ -117,7 +119,7 @@ View Files From A Clonezilla Backup
 Vim
 ===
 
-Opening files from shell
+Opening Files From Shell
 ------------------------
 
 .. code-block:: bash
@@ -127,7 +129,7 @@ Opening files from shell
   # Open in splits
   vim -O FILE FILE FILE
 
-Important commands
+Important Commands
 ------------------------
 
 .. code-block:: text
@@ -195,7 +197,7 @@ Important commands
 Misc
 =====
 
-Low-level things 
+Low-level Things 
 -------------------
 
 .. code-block:: bash
@@ -209,8 +211,8 @@ Low-level things
   strings -n 4 -t x FILE        # Find string in a binary file
   zmap            # Nmap on steroids
 
-Spoof interface
--------------------
+Spoof A Network Interface
+--------------------------
 
 .. code-block:: bash
 
