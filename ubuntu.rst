@@ -8,28 +8,15 @@ Ubuntu
 
 Fix capslock
 -------------
-- `(source) <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_
-- `(source) <https://help.ubuntu.com/community/NumLock>`_
-- `(source) <https://help.ubuntu.com/community/NumLock>`_
+`(source) <http://www.noah.org/wiki/CapsLock_Remap_Howto>`_  `(source) <https://help.ubuntu.com/community/NumLock>`_  `(source) <https://help.ubuntu.com/community/NumLock>`_
 
-# Numbering files (appended number)
-for i in *.png
-do
-  mv $i ${i/.png/-0}
-done
+.. code-block:: bash
 
-# Numbering files (prepended number)
-for i in {1..9}
-do
-  mv file_$i `printf file_0$i`
-done
-
-# Monitor the job
+# Monitor a scheduled crontab job
 watch -c -d -n 1 tail /var/log/syslog
 
 # Downlaod a file
 curl URL --output FILE
-
 # DownloadURL  multiple files matching a patterns
 curl URL 2> /dev/null |
   grep -iE '(FUCK|YOU)' |
@@ -41,6 +28,7 @@ curl URL 2> /dev/null |
 # Print the nth word (awk treats whitespace as word delimeters)
 awk '{print $1}'
 
+# File conversing
 # image to pdf
 convert IMAGEFILE{1..3}.jpg OUT.pdf
 # txt to pdf
@@ -59,6 +47,9 @@ Samba Windows Shares
 --------------------
 
 `(source) <http://www.configserverfirewall.com/ubuntu-linux/mount-samba-share-ubuntu-cifs/>`_
+
+.. code-block:: bash
+
 sudo apt install cifs-utils
 # Manual mount via Nautilus
 nautilus --select smb://192.168.0.3/nfs
@@ -73,9 +64,11 @@ sudo vim /etc/fstab
 mount | grep cifs
 //192.168.0.3/nfs on /media/azhee/nfs type cifs (rw,nosuid,nodev,relatime,vers=default,cache=strict,username=0,domain=,uid=1000,forceuid,gid=1000,forcegid,addr=192.168.0.3,file_mode=0755,dir_mode=0755,nounix,serverino,mapposix,rsize=1048576,wsize=1048576,echo_interval=60,actimeo=1,_netdev)
 
+Viewing Manpages
+-----------------
 
-Manpages
---------
+.. code-block:: bash
+
 # yelp - browse and jump through manpage links
 yelp man:grep
 # groff - generate html manpage with groff, open with browser **(best for printing)**
@@ -92,6 +85,9 @@ zcat $(man --path 1 grep) | man2html -l | w3m -T text/html
 
 View Files From A Clonezilla Backup
 -----------------------------------
+
+.. code-block:: bash
+
 # Extract into an image file
 sudo su
 cat sda2.ext4-ptcl-img.gz.* | gunzip -c | partclone.restore -s - -W -o./sda2.img
