@@ -77,26 +77,16 @@ ex: the editor used for commit messages follows these steps in order
   EDITOR      - environment variable
 
 
-Configuring an Alias 
-
-.. code-block:: bash
+Configuring an Alias ::
 
   git config --global \
     alias.show-graph \
     'log --graph --abbrev-commit --pretty=oneline'
 
-Links
-=================
-- `Docs <https://www.git-scm.com/doc>`_
-- https://www.git-scm.com/downloads
-- https://en.wikipedia.org/wiki/Git
-- https://www.kernel.org/pub/software/scm/git/docs/
-
-Discusion
+Notes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - You can use local repos out of the box, as long as you never push.
 - I learned how to setup git aliases.
-
 
 
 Chapter 4 - Basic Git Concepts
@@ -107,7 +97,9 @@ Terms ``repository object store index blob tree commit tag``
 repository
   A database containing all the info needed to retain and manage a project. Repositories store a copy of *all files* and a copy of the *repository itself*.
 
-- Two types of datastructs inside every repo, *object store* and *index.
+
+There are two types of datastructs inside every repo: *object store* and *index.
+
 
 object store
   The heart of the repository. It contains your original data files and all the log messages, author information, dates, and other information required to rebuild any version or branch of the project. Is copied during a clone operation.
@@ -116,7 +108,8 @@ index
   A snapshot of entire directory structure of the repository at some moment in time. You execute Git commands to stage changes in the index. Changes usually add, delete, or edit some file or set of files. The index records and retains those changes, keeping them safe until you are ready to commit them.
 
 
-- Four types of objects, in the object store: *blob*, *Blob*, *Tree*, *Commit*, *Tag*
+There are four types of objects, in the object store: *blob*, *Blob*, *Tree*, *Commit*, *Tag*
+
 
 Blob 
   Store binary blob versions for each file.
@@ -130,10 +123,3 @@ Commits
 Tags 
   Store a human-readable alias to a commit id.
  
-
-
-
-Term
-  It's definition
-
-
