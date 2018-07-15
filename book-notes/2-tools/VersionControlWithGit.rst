@@ -7,10 +7,13 @@ Version Control With Git
 
 Temp Notes
 ==========
-- View current variables and env settings::
+View current variables and env settings
+
+::
 
   git var -l
   git config -l
+
 
 
 Preface
