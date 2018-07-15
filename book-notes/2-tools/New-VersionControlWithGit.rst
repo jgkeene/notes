@@ -20,10 +20,12 @@ New Version Control With Git
 
 ::
 
+  # Print object info
+  find .git/objects/ -type f | tr '/' ' ' | awk '{print $3 $4}' | while read line; do echo -e "`git cat-file -t $line`::""$line" 3>/dev/null; done |sort 
   find .git/objects/ -type f -print | tr '/' ' ' | awk '{print $3 $4}' | while read line; do echo -e "\033[35m"; git cat-file -t $line; echo -e "\033\0m" ; echo -e "\033[33m"$line"\033[0m"; git cat-file -p $line; echo; done
 
-  git cat-file -t HASH
-  git cat-file -p HASH
+  git cat-file -t HASH          List the type of file object it is
+  git cat-file -p HASH          Print the contents of the file object
 
 
 - Index stored in ``/.git/index``
