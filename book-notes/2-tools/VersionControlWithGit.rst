@@ -1,5 +1,5 @@
 Version Control With Git
-###
+#########################
 
 .. contents::
     :local:
@@ -16,14 +16,11 @@ Chapter 1 - Introduction
 Chapter 2 - Installing Git
 ==============================
 - Install Git ``sudo apt-get install git-all``
-- Important Git packages ``git git-doc gitweb git-gui gitk git-email git-svn`
-
+- Important Git packages ``git git-doc gitweb git-gui gitk git-email git-svn``
 
 Chapter 3 - Getting Started
 ==============================
-- Note: all examples in this chapter were done completely on the *local filesystem
-- List all commands ``git help --all1``
-
+- List all commands ``git help --al1``
 
 Configuring the Commit Author
 
@@ -50,7 +47,7 @@ Set the environmental variables
 - `git clone`
 
 
-- Hierachry of configuration files (decreasing precedence)
+- Config file hierarchy
   1. Current Repository `.git/config` - repository-specific settings
     - manipulated by default, *highest presedence*
       - ``git config user.name "Jesse Keene"``
@@ -59,16 +56,12 @@ Set the environmental variables
     - manipulated with the ``--global`` option
       - ``git config --global user.name "Jesse Keene"``
       - ``git config --global user.email "jgkeene@gmail.com"``
-3. Root Directory - `/etc/gitconfig` - system-wide settings
+  3. Root Directory - `/etc/gitconfig` - system-wide settings
     - manipulated with the `--system` option
 
 
 - `git config -l` - list all settings found among *all* configuration files
-- `--unset` - remove a setting
-
-.. code-block:: bash
-  
-  git config --unset --global user.email
+- `--unset` - remove a setting :: git config --unset --global user.email
 
 
 Multiple configuration options & environment variables exist for the *same*
@@ -94,7 +87,7 @@ Configuring an Alias
 
 Links
 =================
-- `Docs <https://www.git-scm.com/doc`_
+- `Docs <https://www.git-scm.com/doc>`_
 - https://www.git-scm.com/downloads
 - https://en.wikipedia.org/wiki/Git
 - https://www.kernel.org/pub/software/scm/git/docs/
@@ -109,36 +102,38 @@ Discusion
 Chapter 4 - Basic Git Concepts
 ===================================
 
-Terms: `repository object store index blob tree commit tag`
+Terms ``repository object store index blob tree commit tag``
 
-- **repository** - A database containing all the info needed to retain and manage a project. Repositories store a copy of *all files* and a copy of the *repository itself*.
+repository
+  A database containing all the info needed to retain and manage a project. Repositories store a copy of *all files* and a copy of the *repository itself*.
 
-- Two types of datastructs, inside each repository:
+- Two types of datastructs inside every repo, *object store* and *index.
 
-  1. **object store** - The heart of the repository. It contains your original data files and all the log messages, author information, dates, and other information required to rebuild any version or branch of the project.Is copied during a clone operation.
+object store
+  The heart of the repository. It contains your original data files and all the log messages, author information, dates, and other information required to rebuild any version or branch of the project. Is copied during a clone operation.
 
-  2. **index** - A snapshot of entire directory structure of the repository at some moment in time. You execute Git commands to stage changes in the index. Changes usually add, delete, or edit some file or set of files. The index records and retains those changes, keeping them safe until you are ready to commit them.
+index
+  A snapshot of entire directory structure of the repository at some moment in time. You execute Git commands to stage changes in the index. Changes usually add, delete, or edit some file or set of files. The index records and retains those changes, keeping them safe until you are ready to commit them.
 
 
-- Four types of objects, in the *object store*:
+- Four types of objects, in the object store: *blob*, *Blob*, *Tree*, *Commit*, *Tag*
 
-  1. **Blob** - Store binary blob versions for each file.
+Blob 
+  Store binary blob versions for each file.
 
-  2. **Trees** - Store blob identifiers, path names, and file metadata for all files in a directory.
+Trees
+  Store blob identifiers, path names, and file metadata for all files in a directory.
 
-  3. **Commits** - Store commit metadata, each commit points to a *tree* object that captures a snapshot.
+Commits 
+  Store commit metadata, each commit points to a tree object that captures a snapshot.
 
-  4. **Tags** - Store a human-readable alias to a commit id.
+Tags 
+  Store a human-readable alias to a commit id.
  
 
 
-::
 
-  what
-    this is the def
+Term
+  It's definition
 
-
-::
-
-  -a            command-line option "a"   
 
