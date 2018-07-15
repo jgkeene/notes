@@ -9,7 +9,7 @@ New Version Control With Git
 4 - Git Objects and Index
 ==========================
 
-- Objects stored in ``/.git/objects/[2hex]/[38hex]``
+- Objects stored in ``/.git/objects/[2-digit-hex]/[38-digit-hex]``
 - Make a *blob* object with ``git add FILE``
 - Make a *tree* object with ``git write-tree``
 - Make a *commit* object with ``echo -n "Commit message...\n" | git commit-tree TREE-HASH``
