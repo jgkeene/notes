@@ -11,7 +11,7 @@ Preface
 
 Chapter 1 - Introduction
 ==============================
-- General CVS overview. Git development history & features. No notes.
+- CVS overview. 
 
 Chapter 2 - Installing Git
 ==============================
