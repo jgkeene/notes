@@ -9,13 +9,19 @@ Temp Notes
 ==========
 - `Hyperlinked manpages <https://git.github.io/htmldocs/>`_
 
+Show all settings and config files ::
+
+  # ~/.gitconfig
+  git config --global --list --show-origin
+  # $REPO/.git/config
+  git config --local --list --show-origin
+
 
 View current variables and env settings
 
 ::
 
   git var -l
-  git config -l
 
 
 
@@ -129,4 +135,5 @@ Commits
 
 Tags 
   Store a human-readable alias to a commit id.
- 
+
+
