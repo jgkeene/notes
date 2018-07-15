@@ -22,38 +22,32 @@ Git
 Vim
 ---
 
-
 Linux
 -----
 
 Commands
 ~~~~~~~~
 
-
 Debian
 ~~~~~~~
-
 
 Ubuntu
 ~~~~~~~
 
-
-
 Languages
 =========
-
 
 Python
 ------
 
+Sql
+---
 
 Shell
 -----
 
-
 Rst/Md
 ------
-
 
 C/C++
 ------
