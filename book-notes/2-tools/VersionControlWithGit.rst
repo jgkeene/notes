@@ -7,6 +7,9 @@ Version Control With Git
 
 Temp Notes
 ==========
+- `Hyperlinked manpages <https://git.github.io/htmldocs/>`_
+
+
 View current variables and env settings
 
 ::
