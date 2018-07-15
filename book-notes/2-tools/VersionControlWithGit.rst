@@ -53,32 +53,52 @@ Set the environmental variables
 
 - Config file hierarchy
 
-  - 1. Current Repository `.git/config` - repository-specific settings
-
-    - manipulated by default, *highest presedence*
-
-      - ``git config user.name "Jesse Keene"``
-      - ``git config user.email "jgkeene@gmail.com"``
+  - 1. Config in current repo (default) ``.git/config`` - repository-specific settings \
 
 
-  - 2. Home Directory `~/.gitconfig` - user-specific settings
-    - manipulated with the ``--global`` option
-      - ``git config --global user.name "Jesse Keene"``
-      - ``git config --global user.email "jgkeene@gmail.com"``
-  - 3. Root Directory - `/etc/gitconfig` - system-wide settings
-    - manipulated with the `--system` option
+.. code-block:: bash
+
+  example:
+
+  git config user.name "Jesse Keene"
+  git config user.email "jgkeene@gmail.com"
+
+
+
+  - 2. Home Directory ``--global`` ``~/.gitconfig`` - user-specific settings
+     
+ 
+.. code-block:: bash
+
+  example:
+
+  git config --global user.name "Jesse Keene"
+  git config --global user.email "jgkeene@gmail.com"
+
+
+
+  3. Root Directory - ``--system`` ``/etc/gitconfig`` - system-wide settings
+
+
+.. code-block:: bash
+
+  example:
+
+  git config --system user.name "Jesse Keene"
+  git config --system user.email "jgkeene@gmail.com"
+
 
 
 - `git config -l` - list all settings found among *all* configuration files
 - `--unset` - remove a setting :: git config --unset --global user.email
 
 
-Multiple configuration options & environment variables exist for the *same*
-purpose
+- Multiple configuration options & environment variables exist for the *same* purpose
 
-ex: the editor used for commit messages follows these steps in order
 
 .. code-block:: bash
+
+  Note: the editor used for commit messages follows these steps in order
 
   GIT_EDITOR  - environment variable
   core.editor - configuration option
@@ -86,11 +106,13 @@ ex: the editor used for commit messages follows these steps in order
   EDITOR      - environment variable
 
 
+
 Configuring an Alias ::
 
   git config --global \
     alias.show-graph \
     'log --graph --abbrev-commit --pretty=oneline'
+
 
 Notes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,8 +122,6 @@ Notes
 
 Chapter 4 - Basic Git Concepts
 ===================================
-
-Terms ``repository object store index blob tree commit tag``
 
 repository
   A database containing all the info needed to retain and manage a project. Repositories store a copy of *all files* and a copy of the *repository itself*.
