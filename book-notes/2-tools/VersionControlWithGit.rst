@@ -60,8 +60,8 @@ Set the environmental variables
   - 3. Root Directory - ``--system`` ``/etc/gitconfig`` - system-wide settings
 
 
-- `git config -l` - list all settings found among *all* configuration files
-- `--unset` - remove a setting :: git config --unset --global user.email
+- ``git config -l`` - list all settings found among *all* configuration files
+- ``--unset`` - remove a setting :: git config --unset --global user.email
 
 
 - Multiple configuration options & environment variables exist for the *same* purpose
