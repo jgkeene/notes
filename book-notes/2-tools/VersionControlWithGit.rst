@@ -40,10 +40,10 @@ Set the environmental variables
 
 ::
 
-  ``git log                             shows commit IDs
-  ``git show $ID                        show commit details by commit ID
-  ``git show-branch --more=999          shows commits on current branch
-  ``git diff $ID1 $ID2                  compare two commits
+  git log                             shows commit IDs
+  git show $ID                        show commit details by commit ID
+  git show-branch --more=999          shows commits on current branch
+  git diff $ID1 $ID2                  compare two commits
 
 
 - Config file hierarchy
