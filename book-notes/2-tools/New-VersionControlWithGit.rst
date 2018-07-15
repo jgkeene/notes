@@ -43,7 +43,6 @@ New Version Control With Git
 
 
 - Compute hash from a file ``git hash-object FILE``
-- View file history ``git log FILE`` and ``git log --follow FILE`` when the filename was changed
 
 
 6 - Commits
@@ -59,6 +58,10 @@ New Version Control With Git
   git show-branch --more=99999        List the relative names for all commit objects
 
   git log -Ssearch_string debian.rst  Search diffs of a file for specific string 
+  git log FILE                        Show logs for a file
+  git log --follow FILE               Show logs for a file, following any renaming
+
+
   git log master^^^..master           Show commit details for range of commits
   git log --stat master^^^..master    Show only file changes for range of commits
 
