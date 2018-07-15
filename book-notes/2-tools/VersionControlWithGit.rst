@@ -52,41 +52,9 @@ Set the environmental variables
 
 
 - Config file hierarchy
-
-  - 1. Config in current repo (default) ``.git/config`` - repository-specific settings \
-
-
-.. code-block:: bash
-
-  example:
-
-  git config user.name "Jesse Keene"
-  git config user.email "jgkeene@gmail.com"
-
-
-
+  - 1. Config in current repo (default) ``.git/config`` - repository-specific settings 
   - 2. Home Directory ``--global`` ``~/.gitconfig`` - user-specific settings
-     
- 
-.. code-block:: bash
-
-  example:
-
-  git config --global user.name "Jesse Keene"
-  git config --global user.email "jgkeene@gmail.com"
-
-
-
-  3. Root Directory - ``--system`` ``/etc/gitconfig`` - system-wide settings
-
-
-.. code-block:: bash
-
-  example:
-
-  git config --system user.name "Jesse Keene"
-  git config --system user.email "jgkeene@gmail.com"
-
+  - 3. Root Directory - ``--system`` ``/etc/gitconfig`` - system-wide settings
 
 
 - `git config -l` - list all settings found among *all* configuration files
