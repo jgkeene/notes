@@ -121,9 +121,13 @@ Terms: `repository object store index blob tree commit tag`
 
 
 - Four types of objects, in the *object store*:
+
   1. **Blob** - Store binary blob versions for each file.
+
   2. **Trees** - Store blob identifiers, path names, and file metadata for all files in a directory.
+
   3. **Commits** - Store commit metadata, each commit points to a *tree* object that captures a snapshot.
+
   4. **Tags** - Store a human-readable alias to a commit id.
   
 
