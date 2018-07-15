@@ -8,12 +8,13 @@ New Version Control With Git
 
 4 - Git Objects and Index
 ==========================
-Objects stored in `.../.git/objects/##/#######################` 
+
+Objects stored in `repo/.git/objects/##/#######################` 
 
 Viewing objects ::
 
-git cat-file -p
-git ls-files --stage
+  git cat-file -p
+  git ls-files --stage
 
 
 
@@ -21,9 +22,9 @@ Index stored at `.../.git/index`
 
 Viewing index::
 
-git ls-files --stage
-git status
-git diff --cached
+  git ls-files --stage
+  git status
+  git diff --cached
 
 
 
