@@ -140,13 +140,5 @@ Terms: `repository object store index blob tree commit tag`
 
 ::
 
-  --help          helps you 
-  -a            command-line option "a"
-  -b file       options can have arguments
-                  and long descriptions
-  --long        options can be long also
-  --input=file  long options can also have
-                  arguments
-  /V            DOS/VMS-style options too
-
+  -a            command-line option "a"   
 
