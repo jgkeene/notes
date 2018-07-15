@@ -51,11 +51,9 @@ New Version Control With Git
 
 ::
 
-  HEAD          ==        master
-  ORIG_HEAD     ==        master^
-   
-  git rev-parse SYM-NAME              List the HASH for the commit name
-  git show-branch --more=99999        List the relative names for all commit objects
+  git show-branch --more=99999        List all relative commit names
+  git rev-list -all                   List all absolute commit names (HASH)
+  git rev-parse COMMIT-NAME           List the HASH for the commit name
 
   git log -Ssearch_string debian.rst  Search diffs of a file for specific string 
   git log FILE                        Show logs for a file
@@ -81,8 +79,6 @@ New Version Control With Git
 
   git branch NEW-BRANCH STARTING-COMMIT         Create a branch at a specific commit
   git checkout NEW-BRANCH                       Switch to another branch
-  (equiv.)
-  git checkout -b NEW-BRANCH STARTING-COMMIT    Create a branch at a specific commit and swithch to it 
 
   git checkout -m NEW-BRANCH                    Switch to another branch and attempt to merge changes
 
