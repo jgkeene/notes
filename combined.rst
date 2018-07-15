@@ -26,8 +26,8 @@ Vim
 Linux
 -----
 
-Linux Commands
-~~~~~~~~~~~~~
+Commands
+~~~~~~~~
 
 
 Debian
