@@ -84,7 +84,6 @@ Chapter 2: “Workflow Steps”
       -  lvl1 - current “Projects” list
       -  Ground - current “Next Actions” list
 
---------------
 
 Chapter 3: “Project Plan”
 =========================
@@ -94,6 +93,7 @@ Chapter 3: “Project Plan”
    1. ``outcomes`` (for projects) & ``next actions`` (to move things
       along)
    2. ``reminders`` (reviewed regularly)
+
 
 5 Steps To Planning A Project
 -----------------------------
@@ -146,13 +146,14 @@ Chapter 3: “Project Plan”
 
    -  *“Is there something I could do now for this task?”*
 
---------------
+              
 
 Chapter 4 Getting Started: “Coralling Your Stuff”
 =================================================
 
 -  Goal is to ``capture`` everything that has your attention
 -  ypically takes a couple hours
+
 
 Step 1: “Physical Gathering”
 ----------------------------
@@ -177,7 +178,7 @@ Step 2: “Mental Gathering”
    attention on a *seperate sheet of papaer*
 -  Use “Trigger” List (pg 116) to jog mind and come up with more things
 
---------------
+              
 
 Chapter 5: ``Capturing``: Corralling Your “Stuff”
 =================================================
@@ -198,7 +199,7 @@ Step 1: “Physical Gathering”
 -  If it’s too big to fit in INBOX, put post-it not on it
 -  Trash anything if you can
 
---------------
+
 
 Chapter 6 ``Clarifying``: Getting “In” to Empty
 ===============================================
@@ -230,7 +231,7 @@ Projects
 -  Shift your perspective to the larger (multi-step) picture - your
    projects
 
---------------
+
 
 Chapter 7 ``Organizing``: Setting up ’Buckets
 =============================================
@@ -270,7 +271,7 @@ Basic Categories
 -  Reference Materials
 -  “Someday” Lists
 
---------------
+
 
 Chapter 8 ``Reflecting``: Keeping Your System Functional
 ========================================================
@@ -310,7 +311,7 @@ The Power of the Weekly Review
 -  This could be on a Friday afternoon at the end of the workweek or on
    long commutes home.
 
---------------
+
 
 Chapter 9 ``Engaging``: Making the Best Action Choices
 ======================================================
@@ -351,7 +352,7 @@ There are 3 concepts when deciding on work
 
 ``Many times, people are stressed out and distracted in life.``
 
---------------
+
 
 Chapter 10 Getting Projects Under Control
 =========================================
@@ -373,7 +374,7 @@ How Do I Apply All This In My World?
 -  It is acquiring the habit of focusing your energy constructively on
    intended outcomes and open loops before you have to.
 
---------------
+
 
 Chapter 11: The Power of This Program
 =====================================
@@ -391,7 +392,7 @@ Practical reasons to do this shit:
    agreements with yourself, and start feeling good and in control
    again.
 
---------------
+
 
 Chapter 12: The Power of the Next- Action Decision
 ==================================================
@@ -411,7 +412,7 @@ Chapter 12: The Power of the Next- Action Decision
       things happen with a concomitant rise in your self-esteem and
       constructive outlook.
 
---------------
+
 
 Chapter 13: The Power of Outcome
 ================================
