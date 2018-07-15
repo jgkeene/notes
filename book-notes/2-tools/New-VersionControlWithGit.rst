@@ -27,6 +27,7 @@ New Version Control With Git
 
 
 - Index stored in ``/.git/index``
+- Stores the pathnames and blobs whenever you ``git add`` 
 
 ::
 
