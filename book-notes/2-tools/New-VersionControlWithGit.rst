@@ -26,14 +26,15 @@ New Version Control With Git
   git cat-file -p HASH
 
 
-
-
+- Index stored in ``/.git/index``
 
 ::
 
-  git status                  
-  git ls-files --stage
-  git diff --cached
+  git ls-files --stage          Lists contents of index
+
+  git status                    List staged/unstaged changes
+  git diff                      List unstaged changes
+  git diff --cached             List staged changes
 
   git add                       Add to index
   git rm --cached               Remove from index
@@ -66,10 +67,8 @@ New Version Control With Git
   git show --stat master              Show file changes for a single commit
   git show master:debian.rst          Show file contents for a single commit 
 
-
 7 - Branches
 =============
-
 
 ::
 
@@ -85,5 +84,20 @@ New Version Control With Git
 
   git diff NEW-BRANCH master                    Show diff between branches
   git merge-base ORIGINAL-BRANCH NEW-BRANCH     Show which commit this branch came from
+
+8 - Diffs
+========================
+
+9 - Merges 
+========================
+
+10 - Altering Commits
+========================
+
+11 - Stash & Reflog
+========================
+
+8 -
+========================
 
 
