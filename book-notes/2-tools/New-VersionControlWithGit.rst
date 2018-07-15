@@ -6,11 +6,31 @@ New Version Control With Git
     :depth: 5
 
 
-4 - Git Objects
-===============
+4 - Git Objects and Index
+==========================
+Objects stored in `.../.git/objects/##/#######################` 
 
-- `git cat-file -p`
-- `git ls-files --stage`
+Viewing objects ::
+
+git cat-file -p
+git ls-files --stage
+
+
+
+Index stored at `.../.git/index`
+
+Viewing index::
+
+git ls-files --stage
+git status
+git diff --cached
+
+
+
+
+
+
+
 
 
 
