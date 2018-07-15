@@ -52,10 +52,15 @@ Set the environmental variables
 
 
 - Config file hierarchy
+
   - 1. Current Repository `.git/config` - repository-specific settings
+
     - manipulated by default, *highest presedence*
+
       - ``git config user.name "Jesse Keene"``
       - ``git config user.email "jgkeene@gmail.com"``
+
+
   - 2. Home Directory `~/.gitconfig` - user-specific settings
     - manipulated with the ``--global`` option
       - ``git config --global user.name "Jesse Keene"``
