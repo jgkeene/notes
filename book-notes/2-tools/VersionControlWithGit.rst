@@ -52,8 +52,11 @@ Set the environmental variables
 
 
 - Config file hierarchy
+
   - 1. Config in current repo (default) ``.git/config`` - repository-specific settings 
+  
   - 2. Home Directory ``--global`` ``~/.gitconfig`` - user-specific settings
+  
   - 3. Root Directory - ``--system`` ``/etc/gitconfig`` - system-wide settings
 
 
