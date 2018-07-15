@@ -76,19 +76,19 @@ New Version Control With Git
 
 ::
 
-git branch --all                              Show simple branch info
-git show-branch --all                         Show detailed branch info
+  git branch --all                              Show simple branch info
+  git show-branch --all                         Show detailed branch info
 
-git branch NEW-BRANCH STARTING-COMMIT         Create a branch at a specific commit
-git checkout NEW-BRANCH                       Switch to another branch
-(equiv.)
-git checkout -b NEW-BRANCH STARTING-COMMIT    Create a branch at a specific commit and swithch to it 
+  git branch NEW-BRANCH STARTING-COMMIT         Create a branch at a specific commit
+  git checkout NEW-BRANCH                       Switch to another branch
+  (equiv.)
+  git checkout -b NEW-BRANCH STARTING-COMMIT    Create a branch at a specific commit and swithch to it 
 
-git checkout -m NEW-BRANCH                    Switch to another branch and attempt to merge changes
+  git checkout -m NEW-BRANCH                    Switch to another branch and attempt to merge changes
 
-git checkout -d NEW-BRANCH                    Delete a branch
+  git checkout -d NEW-BRANCH                    Delete a branch
 
-git diff NEW-BRANCH master                    Show diff between branches
-git merge-base ORIGINAL-BRANCH NEW-BRANCH     Show which commit this branch came from
+  git diff NEW-BRANCH master                    Show diff between branches
+  git merge-base ORIGINAL-BRANCH NEW-BRANCH     Show which commit this branch came from
 
 
