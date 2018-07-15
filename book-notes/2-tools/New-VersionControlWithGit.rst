@@ -43,15 +43,26 @@ New Version Control With Git
 - View file history ``git log FILE`` and ``git log --follow FILE`` when the filename was changed
 
 
-5 - Commits
+6 - Commits
 ===========
 
+::
+
+HEAD          ==        master
+ORIG_HEAD     ==        master^
+ 
 git rev-parse SYM-NAME              List the HASH for the commit name
 git show-branch --more=99999        List the relative names for all commit objects
 
+git log -Ssearch_string debian.rst  Search diffs of a file for specific string 
 git log master^^^..master           Show commit details for range of commits
 git log --stat master^^^..master    Show only file changes for range of commits
 
 git show master                     Show commit details for a single commit
 git show --stat master              Show file changes for a single commit
 git show master:debian.rst          Show file contents for a single commit 
+
+
+7 - Branches
+=============
+
