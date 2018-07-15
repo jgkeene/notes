@@ -107,13 +107,16 @@ Discusion
 
 
 Chapter 4 - Basic Git Concepts
-===
+===================================
+
 Terms: `repository object store index blob tree commit tag`
+
 - **repository** - A database containing all the info needed to retain and manage.
   a project. Repositories store a copy of *all files* and a copy of the *repository itself*.
 - Two types of datastructs, inside each repository:
   1. **object store** - The heart of the repository. It contains your original data files and all the log messages, author information, dates, and other information required to rebuild any version or branch of the project.Is copied during a clone operation.
   2. **index** - A snapshot of entire directory structure of the repository at some moment in time. You execute Git commands to stage changes in the index. Changes usually add, delete, or edit some file or set of files. The index records and retains those changes, keeping them safe until you are ready to commit them.
+
 - Four types of objects, in the *object store*:
   1. **Blob** - Store binary blob versions for each file.
   2. **Trees** - Store blob identifiers, path names, and file metadata for all files in a directory.
