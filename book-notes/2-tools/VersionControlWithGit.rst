@@ -15,8 +15,15 @@ Chapter 1 - Introduction
 
 Chapter 2 - Installing Git
 ==============================
-- Install Git ``sudo apt-get install git-all``
-- Important Git packages ``git git-doc gitweb git-gui gitk git-email git-svn``
+Install Git ::
+
+  sudo apt install git-all
+
+
+Other git packages ::
+
+  git git-doc gitweb git-gui gitk git-email git-svn
+
 
 Chapter 3 - Getting Started
 ==============================
