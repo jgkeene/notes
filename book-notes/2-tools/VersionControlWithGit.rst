@@ -5,6 +5,14 @@ Version Control With Git
     :local:
     :depth: 5
 
+Temp Notes
+==========
+- View current variables and env settings::
+
+  git var -l
+  git config -l
+
+
 Preface
 =============================
 - No notes.
@@ -43,13 +51,6 @@ Set the environmental variables
   export GIT_AUTHOR_EMAIL='jdl@example.com'
 
 
-::
-
-  git log                             shows commit IDs
-  git show $ID                        show commit details by commit ID
-  git show-branch --more=999          shows commits on current branch
-  git diff $ID1 $ID2                  compare two commits
-
 
 - Config file hierarchy
 
@@ -67,28 +68,28 @@ Set the environmental variables
 - Multiple configuration options & environment variables exist for the *same* purpose
 
 
-.. code-block:: bash
+- For example, each of these controls the editor used for commit messages ::
 
-  Note: the editor used for commit messages follows these steps in order
-
-  GIT_EDITOR  - environment variable
   core.editor - configuration option
+  GIT_EDITOR  - environment variable
   VISUAL      - environment variable
   EDITOR      - environment variable
 
 
-
 Configuring an Alias ::
 
-  git config --global \
-    alias.show-graph \
-    'log --graph --abbrev-commit --pretty=oneline'
+  git config --global \ alias.show-graph \ 'log --graph --abbrev-commit --pretty=oneline'
 
 
 Notes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - You can use local repos out of the box, as long as you never push.
-- I learned how to setup git aliases.
+- Using commit IDs to view history::
+
+  git log                             shows commit IDs
+  git show $ID                        show commit details by commit ID
+  git diff $ID1 $ID2                  compare two commits
+
 
 
 Chapter 4 - Basic Git Concepts
