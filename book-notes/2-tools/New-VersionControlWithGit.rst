@@ -52,13 +52,12 @@ New Version Control With Git
 ::
 
   git show-branch --more=99999        List all relative commit names
-  git rev-list --all                   List all absolute commit names (HASH)
+  git rev-list --all                  List all absolute commit names (HASH)
   git rev-parse COMMIT-NAME           List the HASH for the commit name
 
-  git log -Ssearch_string debian.rst  Search diffs of a file for specific string 
   git log FILE                        Show logs for a file
   git log --follow FILE               Show logs for a file, following any renaming
-
+  git log -Ssearch_string debian.rst  Search diffs of a file for specific string 
 
   git log master^^^..master           Show commit details for range of commits
   git log --stat master^^^..master    Show only file changes for range of commits
