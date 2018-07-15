@@ -38,13 +38,12 @@ Set the environmental variables
   export GIT_AUTHOR_EMAIL='jdl@example.com'
 
 
-- `git log` - general info, commit ID#s
-- `git show ID#` - more detailed info, specific commit ID#
-- `git show-branch --more=10` - shows commits on current branch, up to 10
-- `git diff ID#1 ID#2` - compare two revisions
-- `git rm file` - remove
-- `git mv file1 file2` - rename
-- `git clone`
+::
+
+  ``git log                             shows commit IDs
+  ``git show $ID                        show commit details by commit ID
+  ``git show-branch --more=999          shows commits on current branch
+  ``git diff $ID1 $ID2                  compare two commits
 
 
 - Config file hierarchy
