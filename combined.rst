@@ -23,16 +23,20 @@ Vim
 ---
 
 
+Linux
+-----
+
 Linux Commands
--------------
+~~~~~~~~~~~~~
 
 
 Debian
--------
+~~~~~~~
 
 
 Ubuntu
--------
+~~~~~~~
+
 
 
 Languages
@@ -43,8 +47,8 @@ Python
 ------
 
 
-Bash
-----
+Shell
+-----
 
 
 Rst/Md
