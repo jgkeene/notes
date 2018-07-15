@@ -27,8 +27,6 @@ Other git packages ::
 
 Chapter 3 - Getting Started
 ==============================
-- List all commands ``git help --al1``
-
 Configuring the Commit Author
 
 .. code-block:: bash
@@ -54,15 +52,15 @@ Set the environmental variables
 
 
 - Config file hierarchy
-  1. Current Repository `.git/config` - repository-specific settings
+  - 1. Current Repository `.git/config` - repository-specific settings
     - manipulated by default, *highest presedence*
       - ``git config user.name "Jesse Keene"``
       - ``git config user.email "jgkeene@gmail.com"``
-  2. Home Directory `~/.gitconfig` - user-specific settings
+  - 2. Home Directory `~/.gitconfig` - user-specific settings
     - manipulated with the ``--global`` option
       - ``git config --global user.name "Jesse Keene"``
       - ``git config --global user.email "jgkeene@gmail.com"``
-  3. Root Directory - `/etc/gitconfig` - system-wide settings
+  - 3. Root Directory - `/etc/gitconfig` - system-wide settings
     - manipulated with the `--system` option
 
 
