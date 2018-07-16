@@ -212,6 +212,20 @@ You can use ``-aHAXSv`` for ``rsync`` to make backups
   rsync -aHAXSv --delete --info=progress3 --partial-dir=/home/azhee/Documents/.rsync-partial /home/azhee/Pictures /media/azhee/backup/debian-backups/rsync/Pictures
 
 
+Add the backup commands to cron
+
+.. code-block:: bash
+
+  # Run backup everyday at 7am
+  7 7 * * *   rsync -aHAXSv --delete --info=progress3 --partial-dir=/home/azhee/Documents/.rsync-partial /home/azhee/Documents /media/azhee/backup/debian-backups/rsync/Documents 
+  7 7 * * *   rsync -aHAXSv --delete --info=progress3 --partial-dir=/home/azhee/Documents/.rsync-partial /home/azhee/Pictures /media/azhee/backup/debian-backups/rsync/Pictures
+  7 7 * * *   rsync -aHAXSv --delete --info=progress3 --partial-dir=/home/azhee/Documents/.rsync-partial /home/azhee/Videos /media/azhee/backup/debian-backups/rsync/Videos
+  7 7 * * *   rsync -aHAXSv --delete --info=progress3 --partial-dir=/home/azhee/Documents/.rsync-partial /home/azhee/Music /media/azhee/backup/debian-backups/rsync/Music
+
+  7 7 * * *   rsync -aHAXSv --delete --info=progress3 --partial-dir=/home/azhee/Documents/.rsync-partial /home/azhee/Documents/git /media/azhee/backup/debian-backups/rsync/git
+  7 7 * * *   rsync -aHAXSv --delete --info=progress3 --partial-dir=/home/azhee/Documents/.rsync-partial /home/azhee/Documents/thinking-rock /media/azhee/backup/debian-backups/rsync/thinking-rock
+
+
 Others say all you need is ``-a`` and ``--delete``
 
 .. code-block:: bash
