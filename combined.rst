@@ -12,26 +12,47 @@ Python
 
 Basic Stateents
 ---------------
+
 assert
+~~~~~~
 
 pass
+~~~~~~
+
+::
 
   just a placeholder, used mostly to stub classes
 
 
-return EXPRESSION
+return 
+~~~~~~
 
-  tip: use a tuple to return multiple values
+Tip: use a tuple to return multiple values
+
+:: 
+
+  return EXPRESSION
 
 
-yield EXPRESSION
-yield from ITTERABLE
-  only used when defining a generator function, which produces results on demand
-  when called, it suspends the function and returns a generator object
-  when called again, the function's state is restored and execution begins below the yield statement
+yield 
+~~~~~
+- Only used when defining a *generator function*, which produces results on demand
+- When called, it suspends the function and returns a generator object
+- When called again, the function's state is restored and execution begins below the yield statement
+
+::
+
+  yield EXPRESSION
+  yield from ITTERABLE
+
 
 raise
-raise CLASS [ from (OTHEREXEX | None) }]
+~~~~~
+
+::
+
+  raise CLASS [ from (OTHEREXEX | None) }]
+
 
 
 Flow Control
@@ -64,11 +85,12 @@ for
     [else:          # Executes on success & no-break
         SUITE]
  
-You can't modify the SEQUENCE in the loop.
+- You can't modify the ITTERABLE in the loop.
+- What you can do is loop over a copy of the sequence, and modify the real one
 
-What you can do is loop over a copy of the sequence, and modify the real one
+::
 
-    for ITEM in ITERABLE[:]     # Loop over copy
+  for ITEM in ITERABLE[:]     # Loop over copy
 
 - To itterate over the indices, you can use ``len()`` and ``range()``
 - Or you can use ``enumerate()``
@@ -114,17 +136,11 @@ except:
 ~~~
 
 
-break and continue 
+break & continue 
 ~~~
 - ``break`` only allowed in a for or while loop
 
 
-else Clauses on Loops
-~~~
-
-
-pass 
-~~~
 
 
 
