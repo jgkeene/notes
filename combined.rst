@@ -1,10 +1,3 @@
-Combined
-########
-
-.. contents::
-    :local:
-    :depth: 5
-
 
 
 .. contents::
