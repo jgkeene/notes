@@ -1,8 +1,15 @@
-
+Combined
+########
 
 .. contents::
     :local:
     :depth: 5
+
+
+
+.. contents::
+  :local:
+  :depth: 6
 
 
 Languages
@@ -12,97 +19,98 @@ Languages
 Python
 ***********
 
-Pip
+Pip ::
 
-.. code-block:: bash
-    # https://pip.pypa.io/en/stable/installing/
-    wget https://bootstrap.pypa.io/get-pip.py
-    sudo -H python3 ./get-pip.py
-    
-Installing Packages With Pip, Over The Internet
+  # https://pip.pypa.io/en/stable/installing/
+  wget https://bootstrap.pypa.io/get-pip.py
+  sudo -H python3 ./get-pip.py
 
-.. code-block:: bash
+Installing Packages With Pip, Over The Internet:: 
 
-    pip3 install --user PACKAGE
-    
+  pip3 install --user PACKAGE
+
 Installing Packages With Pip, From File Downloaded From `Pypi <https://pypi.org/>`_
 
 .. code-block:: bash
 
-    pip3 install --user ./PAKAGE.tar.gz
-    
+  pip3 install --user ./PAKAGE.tar.gz
+
 Virtualenv 
 
 .. code-block:: bash 
 
-    # Install
-    sudo apt install python-virtualenv
+  # Install
+  sudo apt install python-virtualenv
 
-    # Create virtualenv directory
-    virtualenv -p python3 ./myvenv 
-    . ./myvenv/bin/activate 
-    deactivate
-    
+  # Create virtualenv directory
+  virtualenv -p python3 ./myvenv 
+  . ./myvenv/bin/activate 
+  deactivate
+
+
 Jupyter Notebook
 
 .. code-block:: bash
 
-    # Ensure that you have the latest pip
-    sudo -H pip3 install --upgrade pip
+  # Ensure that you have the latest pip
+  sudo -H pip3 install --upgrade pip
 
-    # Install Jupyter Notebook
-    sudo -H pip3 install jupyter
+  # Install Jupyter Notebook
+  sudo -H pip3 install jupyter
+
 
 Web scraping 
 
 .. code-block:: text
 
-    beautifulsoup 
-    urllib2 
-    lxml 
-    requests 
-    selenium 
-    webdriver 
+  beautifulsoup 
+  urllib2 
+  lxml 
+  requests 
+  selenium 
+  webdriver 
+
 
 Managing project dependencies 
 
 .. code-block:: bash
 
-    pip freeze > requirements.txt 
-    pip install -r requirements.txt 
+  pip freeze > requirements.txt 
+  pip install -r requirements.txt 
+
 
 Inspecting objects 
 
 .. code-block:: python 
-	
-    # What object takes resposibility
-    import inspect
-    inspect.getmro(type(OBJECT))
 
-    # Is one obj like another
-    isinstance('foo', type(''))                        
+  # What object takes resposibility
+  import inspect
+  inspect.getmro(type(OBJECT))
 
-    # Namespace of obj
-    dir(OBJECT) 	
+  # Is one obj like another
+  isinstance('foo', type(''))                        
 
-    # Address of obj
-    id(OBJECT)
+  # Namespace of obj
+  dir(OBJECT)   
 
-    # Class membership of obj 
-    OBJECT.__class__
+  # Address of obj
+  id(OBJECT)
 
-    # Docstring of obj
-    OBJECT.__doc__ 
+  # Class membership of obj 
+  OBJECT.__class__
 
-     # The assembly equivilant to your code  
-    import codeop, dis
-    dis.dis(codeop.compile_command('l = []; l += 1')
+  # Docstring of obj
+  OBJECT.__doc__ 
+
+  # The assembly equivilant to your code  
+  import codeop, dis
+  dis.dis(codeop.compile_command('l = []; l += 1')
 
 Debugging 
 
 .. code-block:: python
 
-    python -m pydb my_script.py
+  python -m pydb my_script.py
 
 
 
@@ -299,11 +307,11 @@ curl
   curl URL --output FILE
   # DownloadURL  multiple files matching a patterns
   curl URL 2> /dev/null |
-    grep -iE '(FUCK|YOU)' |
-    sed -E 's/^.*href="(.*)".*$/\1/' |
-    while read line; do
-    echo "http://www.whyprime.com/temp/destroy_all_software/"$line
-    done
+  grep -iE '(FUCK|YOU)' |
+  sed -E 's/^.*href="(.*)".*$/\1/' |
+  while read line; do
+  echo "http://www.whyprime.com/temp/destroy_all_software/"$line
+  done
 
 awk
 ~~~~
@@ -334,13 +342,14 @@ Viewing Manpages
   # w3m 
   zcat $(man --path 1 grep) | man2html -l | w3m -T text/html
 
+
 Monitor A Scheduled Crontab Job
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 .. code-block:: bash
 
   watch -c -d -n 1 tail /var/log/syslog
+
 
 Converting Files
 ~~~~~~~~~~~~~~~~~
@@ -384,6 +393,7 @@ You can use ``-aHAXSv`` for ``rsync`` to make backups
 
   rsync -aHAXSv --delete --info=progress3 --partial-dir=/home/azhee/Documents/.rsync-partial /home/azhee/Pictures /media/azhee/backup/debian-backups/rsync/Pictures
 
+
 Others say all you need is ``-a`` and ``--delete``
 
 .. code-block:: bash
@@ -398,6 +408,7 @@ You can use ``-a`` with ``cp`` to make backups, worse performance than rsync
 .. code-block:: bash
 
   cp -a /home/azhee/Pictures /media/azhee/backup/debian-backups/rsync/Pictures
+
 
 tar
 ~~~~~~
@@ -435,7 +446,7 @@ misc
 
   diff -u  oldfile newfile > patchfile 
   then patch oldfile < patchfile
-  
+
   stat ?
   fc  ?
   umask ?
@@ -472,14 +483,14 @@ Setting Up SMB Shares
   # Results
   $ mount | grep gvfsd-fuse
   gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
-  
+
   # Automatic mount, via fstab
   mkdir /media/azhee/nfs
   sudo vim /etc/fstab
   //192.168.0.3/nfs  /media/azhee/nfs  cifs  rw,_netdev,username=0,password=0,users  0 0
   mount | grep cifs
   //192.168.0.3/nfs on /media/azhee/nfs type cifs (rw,nosuid,nodev,relatime,vers=default,cache=strict,username=0,domain=,uid=1000,forceuid,gid=1000,forcegid,addr=192.168.0.3,file_mode=0755,dir_mode=0755,nounix,serverino,mapposix,rsize=1048576,wsize=1048576,echo_interval=60,actimeo=1,_netdev)
-  
+
 
 View and Save Dconf Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -513,4 +524,6 @@ View Installed Software
   egrep '^(Start-Date:|Commandline:)' |
   grep -v aptdaemon |
   egrep '^Commandline:'
+
+
 
