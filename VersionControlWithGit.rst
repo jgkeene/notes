@@ -1,4 +1,4 @@
-New Version Control With Git
+Version Control With Git
 #############################
 
 .. contents::
@@ -6,9 +6,7 @@ New Version Control With Git
     :depth: 5
 
 
-
-
-4 - Git Objects and Index
+4. Objects and Index
 ==========================
 
 - Objects stored in ``/.git/objects/[2-digit-hex]/[38-digit-hex]``
@@ -49,7 +47,7 @@ New Version Control With Git
 - Compute hash from a file ``git hash-object FILE``
 
 
-6 - Commits
+6. Commits
 ===========
 
 
@@ -70,7 +68,8 @@ New Version Control With Git
   git show --stat master              Show file changes for a single commit
   git show master:debian.rst          Show file contents for a single commit 
 
-7 - Branches
+
+7. Branches
 =============
 
 ::
@@ -88,19 +87,17 @@ New Version Control With Git
   git diff NEW-BRANCH master                    Show diff between branches
   git merge-base ORIGINAL-BRANCH NEW-BRANCH     Show which commit this branch came from
 
-8 - Diffs
+
+8. Diffs
 ========================
 
-9 - Merges 
+9. Merges 
 ========================
 
-10 - Altering Commits
+10. Altering Commits
 ========================
 
-11 - Stash & Reflog
-========================
-
-8 -
+11. Stash & Reflog
 ========================
 
 
