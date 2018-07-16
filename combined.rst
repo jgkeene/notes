@@ -10,6 +10,136 @@ Languages
 Python
 ***********
 
+Basic Stateents
+---------------
+assert
+
+pass
+
+  just a placeholder, used mostly to stub classes
+
+
+return EXPRESSION
+
+  tip: use a tuple to return multiple values
+
+
+yield EXPRESSION
+yield from ITTERABLE
+  only used when defining a generator function, which produces results on demand
+  when called, it suspends the function and returns a generator object
+  when called again, the function's state is restored and execution begins below the yield statement
+
+raise
+raise CLASS [ from (OTHEREXEX | None) }]
+
+
+Flow Control
+-------------
+
+if 
+~~~
+
+::
+
+    if TEST:
+        SUITE
+    [elif:
+        SUITE]
+    [elif:
+        SUITE]*
+    [else:
+        SUITE]
+
+
+for
+~~~
+
+::
+
+    for ITEM in ITERABLE:
+        SUITE
+    [[break]]
+    [[continue]]
+    [else:          # Executes on success & no-break
+        SUITE]
+ 
+You can't modify the SEQUENCE in the loop.
+
+What you can do is loop over a copy of the sequence, and modify the real one
+
+    for ITEM in ITERABLE[:]     # Loop over copy
+
+- To itterate over the indices, you can use ``len()`` and ``range()``
+- Or you can use ``enumerate()``
+
+
+while
+~~~~~~
+
+::
+
+    while TEST:
+        SUITE
+    [[break]]
+    [[continue]]
+    [else:
+        SUITE]
+
+
+try
+~~~
+
+::
+
+    try:
+        SUITE
+    except [TYPE [as VALUE]]:
+        SUITE
+    [else:                  # Executes if no-exceptions raised
+        SUITE]
+    [finally:               # Always executes
+        SUITE]
+
+- Must have either an ``except`` of ``finally``, or both.
+
+
+raise
+~~~~~~
+
+try:
+    print(1 / 0)
+except:
+    raise RuntimeError("Something bad happened")
+~~~
+
+
+break and continue 
+~~~
+- ``break`` only allowed in a for or while loop
+
+
+else Clauses on Loops
+~~~
+
+
+pass 
+~~~
+
+
+
+Functions
+~~~
+
+
+
+###
+***
+===
+---
+~~~
+
+
 Shell
 ***********
 
