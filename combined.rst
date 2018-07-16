@@ -112,6 +112,8 @@ while
 try
 ~~~
 
+- Must have either an ``except`` of ``finally``, or both.
+
 ::
 
     try:
@@ -123,37 +125,26 @@ try
     [finally:               # Always executes
         SUITE]
 
-- Must have either an ``except`` of ``finally``, or both.
-
 
 raise
 ~~~~~~
 
+::
+
+
 try:
-    print(1 / 0)
+  print(1 / 0)
 except:
-    raise RuntimeError("Something bad happened")
-~~~
+  raise RuntimeError("Something bad happened")
 
 
 break & continue 
-~~~
+~~~~~~~~~~~~~~~~~~
 - ``break`` only allowed in a for or while loop
 
 
 
 
-
-Functions
-~~~
-
-
-
-###
-***
-===
----
-~~~
 
 
 Shell
