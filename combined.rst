@@ -144,6 +144,14 @@ break & continue
 
 
 
+Debian
+~~~~~~~
+- pip not installed
+- ``python3 get-pip.py --user``
+- installs to ``$HOME/.local/bin/``
+- add ``export PATH=$HOME/.local/bin:PATH`` to  ``.bashrc``
+- install using pip like this ``pip3 install --user PACKAGE``
+
 
 
 
