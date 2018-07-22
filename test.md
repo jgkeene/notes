@@ -3,10 +3,16 @@
 
 Some code
 
-```
+```bash
 sudo apt install asdflasdf
-asdflasdfas
-asdflasdfasdf
+rm -rf aaa
+dmesg
+```
+
+```shell
+sudo apt install asdflasdf
+rm -rf aaa
+dmesg
 ```
 
 - asdflasdf
