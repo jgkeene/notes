@@ -29,3 +29,22 @@ dmesg
 Some more code
 
 `sudo apt instal asdfasdf`
+
+
+*asdfasdf*
+**asdf**
+***asdf***
+
+# Languages
+
+## Python
+
+### Basic
+
+if
+```
+if foo:
+  bar
+```
+
+### Advanced
