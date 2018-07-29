@@ -79,3 +79,66 @@ source venv/bin/activate
 (venv)$ pip install --editable .
 (venv)$ python test_PROJECT.py # Run the unit tests.
 ```
+
+
+
+
+
+
+
+
+
+
+
+```
+python3 -m site --user-site
+```
+
+`/home/azhee/.local/lib/python3.5/site-packages`
+
+```
+python3 -m site --user-base
+```
+
+`/home/azhee/.local`
+
+
+
+Install all packages you'll need
+```
+cd PROJ
+pipenv install packages
+```
+
+Create some python scripts and run them
+```
+pipenv run python APP.py
+```
+
+Spawn a python REPL that has access to the pipenv packages you just installed
+```
+pipenv shell
+```
+
+
+
+
+
+
+
+# Skeleton - Zed
+
+Install the following Python packages:
+1. [x] pip
+2. [x] distribute (replaced with setuptools)
+3. [x] virtualenv
+4. [x] nose ((replaced with pytest)
+
+>>> pip.__file__
+'/usr/local/lib/python3.5/dist-packages/pip/__init__.py'
+>>> setuptools.__file__
+'/usr/local/lib/python3.5/dist-packages/setuptools/__init__.py'
+>>> virtualenv.__file__
+'/home/azhee/.local/lib/python3.5/site-packages/virtualenv.py'
+>>> nose.__file__
+'/home/azhee/.local/lib/python3.5/site-packages/nose/__init__.py'
